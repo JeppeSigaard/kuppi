@@ -1,0 +1,55 @@
+///**///***///**///
+//* Base Styles *//
+///**///***///**///
+html,body{
+
+    font-family: $base-font;
+    font-weight: 300;
+    font-size: 12px;
+    @media only screen and(min-width:480px){font-size: 13px;}
+    @media only screen and(min-width:640px){font-size: 14px;}
+    @media only screen and(min-width:768px){font-size: 16px;}
+
+    box-sizing:border-box;
+    text-rendering: optimizeLegibility;
+    backface-visibility: hidden;
+    -webkit-text-size-adjust: 100%;
+    width:100%;
+    overflow-x: hidden;
+    z-index:1;
+}
+body *{
+    box-sizing:inherit;
+    backface-visibility: inherit;
+
+    ::selection {
+        background: $cardboard-color;
+    }
+    ::-moz-selection {
+        background: $cardboard-color;
+    }
+}
+
+
+
+img{
+    width:100%;
+    max-width:100%;
+    height:auto;
+}
+
+header,section,footer,main{
+    display: block;
+    clear: both;
+    overflow: auto;
+}
+
+p{
+    line-height:1.6;
+    margin-bottom:10px;
+}
+
+main{
+    margin-top: 30px;
+    padding:20px;
+}

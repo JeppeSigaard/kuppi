@@ -1,0 +1,43 @@
+// Fancy centering with extras callbackish...
+@mixin center($left:false,$top:false,$transform:null){
+    position:absolute;
+    $left-c: 0;
+    @if($left){
+         left:50%;
+         $left-c:-50%;
+    }
+    $top-c: 0;
+    @if($top){
+         top:50%;
+         $top-c:-50%;
+    }
+    transform: translate($left-c,$top-c) $transform;
+}
+
+// Make font sizing a breeze, maybe?
+// Scales to: 480px, 640px, 768px, 960px
+@mixin font-size($size1,$size2:null,$size3:null,$size4:null,$size5:null){
+
+    font-size:$size1;
+
+    @if ($size2){@media only screen and(min-width:480px){font-size:$size2;}}
+    @if ($size3){@media only screen and(min-width:640px){font-size:$size3;}}
+    @if ($size4){@media only screen and(min-width:768px){font-size:$size4;}}
+    @if ($size5){@media only screen and(min-width:960px){font-size:$size5;}}
+}
+
+// Seksten-ni
+@mixin sixteen-nine($width){
+    position:relative;
+    width:$width;
+    height:0;
+    padding-top:($width /16 * 9);
+
+    >*{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+    }
+}

@@ -1,0 +1,78 @@
+header{
+    position: relative;
+    @extend .cardboard;
+    box-shadow: $base-shadow;
+    z-index:10;
+}
+
+.front-banner{
+    color:white;
+
+    .inner{
+        //max-width:$page-width-max;
+        margin:0px auto;
+        padding:60px 20px 60px;
+    }
+
+    .front-logo{
+        text-indent:-999999px;
+        width:228px;
+        height:145px;
+        background:url('../statics/logo-stor.png') 0px no-repeat;
+    }
+
+    .front-tag{
+        font-family: $contrast-font;
+        font-size:190%;
+        width:228px;
+        white-space: nowrap;
+        margin:40px 0px 0px;
+        text-align: center;
+        cursor:default;
+    }
+}
+
+nav{
+    //max-width: $page-width-max;
+    margin:auto;
+    margin-right:100px;
+
+
+    ul{
+        font-size: 0;
+    }
+
+    li{
+
+        width:25%;
+        display: inline-block;
+        vertical-align: top;
+        border:solid white;
+        border-width:0px 1px;
+        margin:0 -1px;
+
+        &#menu-item-home a{
+            font-size:0;
+            background:url(../statics/logo-lille.png) no-repeat center 10px;
+            background-size:165px;
+        }
+    }
+
+    a, a:visited{
+        font-size: 24px;
+        color:white;
+        display: block;
+        line-height:80px;
+        height:80px;
+        text-align: center;
+        text-transform: uppercase;
+        background: transparent;
+        transition:background .3s;
+
+        &:hover{
+            color:white;
+            background:rgba(black,.1);
+        }
+    }
+}
+

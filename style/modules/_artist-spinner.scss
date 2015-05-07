@@ -1,0 +1,106 @@
+.artist-spinner{
+    @extend .design-spinner;
+    padding-bottom:0;
+    height:205px;
+    background:$blue;
+    position:relative;
+
+
+    .artists{
+        z-index:1;
+        @extend .spin-left;
+        background:transparent;
+
+        nav a{
+            top:30px;
+            width:40px;
+            height:40px;
+            left:-20px;
+            line-height: 40px;
+
+            &:after{
+                font-size:20px;
+                line-height: inherit;
+            }
+            &.right{
+                left:auto;
+                right:-20px;
+            }
+        }
+
+        div{
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0;
+        }
+
+        .artist{
+            width:33%;
+            background-size:cover;
+            background-position: center;
+            opacity:.5;
+
+            &:after{
+                content:'';
+                position:absolute;
+
+            }
+        }
+    }
+
+    .artists-heading{
+        height:100%;
+        position:absolute;
+        width:50%;
+        right:25%;
+        z-index:3;
+        @media only screen and(min-width:768px){
+            right:0;
+        }
+
+        h3{
+            margin-top:-40px;
+            font-size:150%;
+        }
+
+        a{
+            position:absolute;
+            width:100%;
+            height:20px;
+            top:50%;
+            text-align: center;
+            color:black;
+            font-family: $contrast-font;
+            transform:translate(0,-50%);
+        }
+
+        span{
+            margin-top:40px;
+            padding-top:20px;
+            font-size:110%;
+        }
+
+        &:before, &:after{
+            content:'';
+            position:absolute;
+            left:-33.333%;
+            @media only screen and(min-width:768px){
+                left:0;
+            }
+            height:100%;
+            width:20%;
+            background:url('../statics/bucket.png') center no-repeat;
+
+        }
+
+        &:after{
+            left:auto;
+            right:-33.333%;
+            @media only screen and(min-width:768px){
+                right:0;
+            }
+
+        }
+    }
+}
