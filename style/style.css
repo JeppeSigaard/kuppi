@@ -264,4 +264,19 @@ nav a:hover, nav a:visited:hover { color: white; background: rgba(0, 0, 0, 0.1);
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_shop\.scss}line{font-family:\000037}}
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button { text-align: center; background: #77dd90; display: block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_404\.scss}line{font-family:\000031}}
+body.error404 { background: rgba(115, 161, 207, 0.2); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_404\.scss}line{font-family:\000035}}
+a.fourohfour { display: block; color: #eca946; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_404\.scss}line{font-family:\0000310}}
+a.fourohfour img, a.fourohfour span, a.fourohfour h1 { display: block; text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_404\.scss}line{font-family:\0000316}}
+a.fourohfour img { width: 210px; margin: 0px auto 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_404\.scss}line{font-family:\0000321}}
+a.fourohfour h1 { font-size: 1000%; padding: 30px 0px 10px; font-family: "Covered By Your Grace", cursive; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_404\.scss}line{font-family:\0000326}}
+a.fourohfour span { line-height: 1.4; font-size: 120%; }
+
 /*# sourceMappingURL=style.css.map */

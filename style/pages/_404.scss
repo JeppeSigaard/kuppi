@@ -1,0 +1,30 @@
+body.error404{
+    background:rgba($blue,.2);
+}
+
+a.fourohfour{
+    display: block;
+    color: $gelb;
+    //text-shadow: $subtle-shadow;
+
+    img,span,h1{
+        display: block;
+        text-align: center;
+
+    }
+
+    img{
+        width:210px;
+        margin:0px auto 40px;
+    }
+
+    h1{
+        font-size:1000%;
+        padding:30px 0px 10px;
+        font-family: $contrast-font;
+    }
+    span{
+        line-height: 1.4;
+        font-size:120%;
+    }
+}
