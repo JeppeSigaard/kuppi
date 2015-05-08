@@ -1,9 +1,19 @@
+
+<?php
+
+$artists = get_posts(array(
+    'post_type' => 'kunstner',
+    'numberposts'   => -1,
+));
+
+?>
+
 <section class="artist-spinner">
     <div class="artists">
     <?php foreach ($artists as $artist) : ?>
     <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($artist->ID), 'full' );?>
-    <div class="artist" style="background-image:url(<?php echo $image_url[0] ?>);">
-    </div>
+    <a href="<?php echo get_the_permalink($artist->ID) ?>" class="artist" style="background-image:url(<?php echo $image_url[0] ?>);">
+    </a>
 
     <?php endforeach; ?>
         <nav>

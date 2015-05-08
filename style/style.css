@@ -29,7 +29,7 @@ a, a:active, a:visited, a:hover { color: inherit; text-decoration: none; }
 .cardboard, header { background: #cc9d7f url("../statics/cardboard.jpg") repeat center; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\000034}}
-html, body { font-family: "oswald", sans-serif; font-weight: 300; font-size: 12px; box-sizing: border-box; text-rendering: optimizeLegibility; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-text-size-adjust: 100%; width: 100%; overflow-x: hidden; z-index: 1; }
+html, body { font-family: "oswald", sans-serif; font-weight: 300; font-size: 12px; box-sizing: border-box; text-rendering: optimizeLegibility; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-text-size-adjust: 100%; width: 100%; overflow-x: hidden; z-index: 1; background: #e8e8e8; }
 @media only screen and (min-width: 480px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\000034}}
   html, body { font-size: 13px; } }
 @media only screen and (min-width: 640px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\000034}}
@@ -37,25 +37,22 @@ html, body { font-family: "oswald", sans-serif; font-weight: 300; font-size: 12p
 @media only screen and (min-width: 768px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\000034}}
   html, body { font-size: 16px; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000318}}
 body * { box-sizing: inherit; -webkit-backface-visibility: inherit; backface-visibility: inherit; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000322}}
 body * ::-moz-selection { background: #cc9d7f; }
 body * ::selection { background: #cc9d7f; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000325}}
 body * ::-moz-selection { background: #cc9d7f; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000332}}
 img { width: 100%; max-width: 100%; height: auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000338}}
 header, section, footer, main { display: block; clear: both; overflow: auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000344}}
 p { line-height: 1.6; margin-bottom: 10px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_base\.scss}line{font-family:\0000352}}
-main { margin-top: 30px; padding: 20px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/assets\/_article\.scss}line{font-family:\000033}}
 article { line-height: 1.6; }
@@ -221,9 +218,6 @@ header nav a:hover, header nav a:visited:hover { color: white; background: rgba(
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_design-spinner\.scss}line{font-family:\00003132}}
 .design-spinner .designs .design, .artist-spinner .designs .design { background-size: cover; background-position: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_bucket-calc\.scss}line{font-family:\000031}}
-.bucket-calc { min-height: 400px; }
-
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\000031}}
 .artist-spinner { padding-bottom: 0; height: 205px; background: #73a1cf; position: relative; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\000039}}
@@ -235,30 +229,73 @@ header nav a:hover, header nav a:visited:hover { color: white; background: rgba(
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000324}}
 .artist-spinner .artists nav a.right { left: auto; right: -20px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000330}}
-.artist-spinner .artists div { width: 100%; height: 100%; position: absolute; left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000337}}
+.artist-spinner .artists div, .artist-spinner .artists .artist { width: 100%; height: 100%; position: absolute; display: block; left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000338}}
 .artist-spinner .artists .artist { width: 33%; background-size: cover; background-position: center; opacity: .5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000344}}
 .artist-spinner .artists .artist:after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("../statics/bucket.png") center no-repeat; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000357}}
 .artist-spinner .artists-heading { height: 100%; position: absolute; width: 50%; right: 25%; z-index: 3; }
-@media only screen and (min-width: 768px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000356}}
+@media only screen and (min-width: 768px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000357}}
   .artist-spinner .artists-heading { right: 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000367}}
 .artist-spinner .artists-heading h3 { margin-top: -40px; font-size: 150%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000372}}
 .artist-spinner .artists-heading a { position: absolute; width: 100%; height: 20px; top: 50%; text-align: center; color: black; font-family: "Covered By Your Grace", cursive; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000383}}
 .artist-spinner .artists-heading span { margin-top: 40px; padding-top: 20px; font-size: 110%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000389}}
 .artist-spinner .artists-heading:before, .artist-spinner .artists-heading:after { content: ''; position: absolute; left: -33.333%; height: 100%; width: 20%; background: url("../statics/bucket.png") center no-repeat; }
-@media only screen and (min-width: 768px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000388}}
+@media only screen and (min-width: 768px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\0000389}}
   .artist-spinner .artists-heading:before, .artist-spinner .artists-heading:after { left: 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\00003102}}
 .artist-spinner .artists-heading:after { left: auto; right: -33.333%; }
-@media only screen and (min-width: 768px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\00003101}}
+@media only screen and (min-width: 768px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_artist-spinner\.scss}line{font-family:\00003102}}
   .artist-spinner .artists-heading:after { right: 0; } }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\000031}}
+.blogroll { margin-top: 40px; font-size: 0; padding: 10px; max-width: 1280px; margin: 0px auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\000038}}
+.blogroll .preview { vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000312}}
+.blogroll figure img { display: block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000317}}
+.blogroll .preview .inner { font-size: 12px; background: white; display: block; position: relative; margin: 10px 10px 40px; -webkit-transition: box-shadow .2s, top .2s; transition: box-shadow .2s, top .2s; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); top: 0px; }
+@media only screen and (min-width: 480px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000317}}
+  .blogroll .preview .inner { font-size: 13px; } }
+@media only screen and (min-width: 640px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000317}}
+  .blogroll .preview .inner { font-size: 14px; } }
+@media only screen and (min-width: 768px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000317}}
+  .blogroll .preview .inner { font-size: 16px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000327}}
+.blogroll .preview .inner:hover { box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.3); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000332}}
+.blogroll .preview .inner .desc { padding: 10px 10px 30px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000335}}
+.blogroll .preview .inner .desc:before { content: ''; display: block; height: 60px; margin-bottom: 10px; background: url("../statics/bucket-black.png") center no-repeat; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000343}}
+.blogroll .preview .inner .desc h3 { font-size: 150%; line-height: 1.2; text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000349}}
+.blogroll .preview .inner .desc span { text-align: center; display: block; font-family: "Covered By Your Grace", cursive; font-size: 150%; margin: 20px 0px; }
+
+@media only screen and (min-width: 480px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000361}}
+  .blogroll .preview.preview-medium, .blogroll .preview.preview-small { display: inline-block; width: 50%; } }
+@media only screen and (min-width: 768px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000372}}
+  .blogroll .preview.preview-medium { display: block; width: auto; font-size: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000378}}
+  .blogroll .preview.preview-medium figure { display: inline-block; width: 49.5%; overflow: hidden; vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000385}}
+  .blogroll .preview.preview-medium .desc { font-size: 12px; position: absolute; right: 0; top: 50%; width: 50%; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); } }
+@media only screen and (min-width: 768px) and (min-width: 480px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000385}}
+  .blogroll .preview.preview-medium .desc { font-size: 13px; } }
+@media only screen and (min-width: 768px) and (min-width: 640px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000385}}
+  .blogroll .preview.preview-medium .desc { font-size: 14px; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000385}}
+  .blogroll .preview.preview-medium .desc { font-size: 16px; } }
+
+@media only screen and (min-width: 768px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_blogroll\.scss}line{font-family:\0000395}}
+  .blogroll .preview.preview-small { width: 33.3333%; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_shop\.scss}line{font-family:\000031}}
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product { box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); padding: 10px; }
 
@@ -278,4 +315,5 @@ a.fourohfour img { width: 210px; margin: 0px auto 40px; }
 a.fourohfour h1 { font-size: 1000%; padding: 30px 0px 10px; font-family: "Covered By Your Grace", cursive; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_404\.scss}line{font-family:\0000326}}
 a.fourohfour span { line-height: 1.4; font-size: 120%; }
+
 /*# sourceMappingURL=style.css.map */

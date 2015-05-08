@@ -1,3 +1,12 @@
+<?php
+
+$products = get_posts(array(
+    'post_type' => 'product',
+    'numberposts'   => -1,
+));
+
+
+?>
 
 <section class="design-spinner">
     <div class="spin-left">

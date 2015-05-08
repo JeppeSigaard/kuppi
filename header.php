@@ -18,7 +18,7 @@ $nav_args = array(
 
 );
 ?>
-<header role="directory">
+<header role="navigation">
     <?php if (is_front_page()) : ?>
     <section class="front-banner" role="banner">
         <div class="inner">

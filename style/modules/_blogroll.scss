@@ -1,0 +1,100 @@
+.blogroll{
+    margin-top:40px;
+    font-size: 0;
+    padding:10px;
+    max-width:$page-width-max;
+    margin:0px auto;
+
+    .preview{
+        vertical-align: top;
+    }
+
+    figure img{
+        display: block;
+    }
+}
+
+.blogroll .preview .inner{
+    @include font-size;
+    background:white;
+    display: block;
+    position:relative;
+    margin:10px 10px 40px;
+    transition:box-shadow .2s, top .2s;
+    box-shadow:1px 1px 5px rgba(0,0,0,.1);
+    top:0px;
+
+    &:hover{
+        //top:-1px;
+        box-shadow: $base-shadow;
+    }
+
+    .desc{
+        padding:10px 10px 30px;
+
+        &:before{
+            content:'';
+            display: block;
+            height:60px;
+            margin-bottom:10px;
+            background:url('../statics/bucket-black.png') center no-repeat;
+        }
+
+        h3{
+            font-size:150%;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        span{
+            text-align: center;
+            display: block;
+            font-family: $contrast-font;
+            font-size: 150%;
+            margin:20px 0px;
+        }
+    }
+}
+
+@media only screen and(min-width:480px){
+
+    .blogroll .preview.preview-medium,
+    .blogroll .preview.preview-small{
+        display: inline-block;
+        width:50%;
+
+    }
+
+}
+
+@media only screen and(min-width:768px){
+
+    .blogroll .preview.preview-medium{
+        display: block;
+        width:auto;
+        font-size:0;
+
+
+        figure{
+            display: inline-block;
+            width:49.5%;
+            overflow:hidden;
+            vertical-align: top;
+        }
+
+        .desc{
+            @include font-size;
+            position:absolute;
+            right:0;
+            top:50%;
+            width:50%;
+            transform:translate(0,-50%);
+        }
+    }
+
+    .blogroll .preview.preview-small{
+        width:33.3333%;
+
+    }
+
+}
