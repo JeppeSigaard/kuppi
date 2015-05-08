@@ -46,3 +46,19 @@ p{
     margin-bottom:10px;
 }
 
+
+
+@media only screen and(min-width:960px){
+
+    .blogroll main,
+    .content main{
+        width:66.6666%;
+        display: inline-block;
+    }
+
+    .blogroll aside,
+    .content aside{
+        width:33.33333%;
+        display: inline-block;
+    }
+}

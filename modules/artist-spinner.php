@@ -23,7 +23,7 @@ $artists = get_posts(array(
     </div>
     <div class="artists-heading">
         <h3>Mød dem der dekorerer skraldet</h3>
-        <a href="<?php echo esc_url(get_bloginfo('url')) ?>/shop/">Kunstnere</a>
+        <a href="<?php echo esc_url(get_bloginfo('url')) ?>/kunstner/">Kunstnere</a>
         <span>Kulør der gør en forskel</span>
     </div>
 </section>
