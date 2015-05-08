@@ -9,10 +9,10 @@ $(function(){
         wrapAround: true,
         setGallerySize: false,
         cellSelector: '.artist',
+        cellAlign: 'left',
     });
 
     $('.artist-spinner').on('click',function(e){
-        console.log(e);
         var target = $(e.target);
 
         if(target.is('nav a.left')){
