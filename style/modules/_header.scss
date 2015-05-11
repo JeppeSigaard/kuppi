@@ -5,33 +5,6 @@ header{
     z-index:10;
 }
 
-.front-banner{
-    color:white;
-
-    .inner{
-        //max-width:$page-width-max;
-        margin:0px auto;
-        padding:60px 20px 60px;
-    }
-
-    .front-logo{
-        text-indent:-999999px;
-        width:228px;
-        height:145px;
-        background:url('../statics/logo-stor.png') 0px no-repeat;
-    }
-
-    .front-tag{
-        font-family: $contrast-font;
-        font-size:190%;
-        width:228px;
-        white-space: nowrap;
-        margin:40px 0px 0px;
-        text-align: center;
-        cursor:default;
-    }
-}
-
 header nav{
     //max-width: $page-width-max;
     margin:auto;

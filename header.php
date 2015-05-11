@@ -3,6 +3,7 @@
 <head>
     <?php wp_head();?>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php wp_title(true,' · ', 'right'); ?></title>
 </head>
 <body <?php body_class(); ?>>
@@ -20,19 +21,7 @@ $nav_args = array(
 ?>
 <header role="navigation">
     <?php if (is_front_page()) : ?>
-    <section class="front-banner" role="banner">
-        <div class="inner">
-            <h1 class="front-logo">
-                <?php echo esc_attr(get_bloginfo('name')); ?>
-            </h1>
-            <h2 class="front-tag">
-                <?php echo esc_attr(get_bloginfo('description')); ?>
-            </h2>
-            <div class="front-bins">
-
-            </div>
-        </div>
-    </section>
+    <?php get_template_part('modules/front','top'); ?>
     <?php endif; ?>
 
     <nav>

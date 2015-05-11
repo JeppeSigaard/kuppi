@@ -1,0 +1,38 @@
+.front-banner{
+    color:white;
+
+    .inner{
+        margin:0px auto;
+        padding:100px 0px;
+        font-size: 0;
+
+        >div{
+            display: inline-block;
+            vertical-align: top;
+            width:100%;
+            @media only screen and(min-width:640px){
+                width:50%;
+            }
+
+            @include font-size;
+        }
+    }
+
+    .front-logo{
+        text-indent:-999999px;
+        margin:auto;
+        width:228px;
+        height:145px;
+        background:url('../statics/logo-stor.png') 0px no-repeat;
+    }
+
+    .front-tag{
+        font-family: $contrast-font;
+        font-size:190%;
+        width:228px;
+        white-space: nowrap;
+        margin:40px auto 0px;
+        text-align: center;
+        cursor:default;
+    }
+}
