@@ -6,9 +6,9 @@ header{
 }
 
 header nav{
-    //max-width: $page-width-max;
+    max-width: $page-width-max;
     margin:auto;
-    margin-right:100px;
+    //margin-right:100px;
 
 
     ul{
@@ -22,7 +22,16 @@ header nav{
         vertical-align: top;
         border:solid white;
         border-width:0px 1px;
-        margin:0 -1px;
+
+        &:first-child{
+            border-width:0px 1px 0px 0px;
+        }
+
+
+        &:last-child{
+            border-width:0px 0px 0px 1px;
+        }
+
 
         &#menu-item-home a{
             font-size:0;

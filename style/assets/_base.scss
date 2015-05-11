@@ -47,6 +47,11 @@ p{
 }
 
 
+aside{
+    padding:10px;
+    @include font-size;
+}
+
 
 @media only screen and(min-width:960px){
 
@@ -54,11 +59,13 @@ p{
     .content main{
         width:66.6666%;
         display: inline-block;
+        vertical-align: top;
     }
 
     .blogroll aside,
     .content aside{
         width:33.33333%;
         display: inline-block;
+        vertical-align: top;
     }
 }

@@ -1,7 +1,6 @@
 .blogroll{
-    margin-top:40px;
     font-size: 0;
-    padding:10px;
+    padding:40px 10px;
     max-width:$page-width-max;
     margin:0px auto;
 
@@ -30,7 +29,7 @@
     }
 
     .desc{
-        padding:10px 10px 30px;
+        padding:10px 10px 20px;
 
         &:before{
             content:'';
@@ -62,7 +61,9 @@
     .blogroll .preview.preview-small{
         display: inline-block;
         width:50%;
-
+        .desc{
+            min-height: 230px;
+        }
     }
 
 }

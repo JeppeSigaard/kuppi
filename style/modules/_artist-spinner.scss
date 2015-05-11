@@ -1,9 +1,15 @@
 .artist-spinner{
     @extend .design-spinner;
     padding-bottom:0;
-    height:205px;
     background:$blue;
-    position:relative;
+    height:205px;
+
+    >.inner{
+        //max-width: $page-width-max;
+        margin:0px auto;
+        height:inherit;
+        position:relative;
+    }
 
 
     .artists{

@@ -3,30 +3,57 @@ $(function(){
 
     if($('.design-spinner').length){
 
-    var $spinner = $('.design-spinner .designs').flickity({
-        prevNextButtons: false,
-        pageDots: false,
-        wrapAround: true,
-        setGallerySize: false,
-        autoPlay: 9000
-    });
+    var $spinner = $('.design-spinner .designs'),
+        $spinSmall = $spinner.clone().appendTo('.front-bins .bin-small'),
+        $spinLarge = $spinner.clone().appendTo('.front-bins .bin-large'),
+        spinnerSettings = {
 
-    $('.design-spinner').on('click',function(e){
+            primary: {
+                prevNextButtons: false,
+                pageDots: false,
+                wrapAround: true,
+                setGallerySize: false,
+                autoPlay: 9000,
+            },
+            secondary: {
+                prevNextButtons: false,
+                pageDots: false,
+                wrapAround: true,
+                setGallerySize: false,
+                draggable: false,
 
-        var target = $(e.target);
-
-        if(target.is('.spin-left nav a.left')){
-            e.preventDefault();
-            $spinner.flickity('previous');
-
+            }
         }
 
-        else if(target.is('.spin-left nav a.right')){
-            e.preventDefault();
-            $spinner.flickity('next');
+        $spinSmall.flickity(spinnerSettings.secondary);
+        $spinLarge.flickity(spinnerSettings.secondary);
+        $spinner.flickity(spinnerSettings.primary);
 
-        }
+        var flkty = $spinner.data('flickity');
 
-    });
+        $spinner.on( 'settle', function() {
+
+            $spinLarge.flickity('select', flkty.selectedIndex);
+            $spinSmall.flickity('select', flkty.selectedIndex);
+        });
+
+
+        $('.design-spinner').on('click',function(e){
+
+            var target = $(e.target);
+
+            if(target.is('.spin-left nav a.left')){
+                e.preventDefault();
+                $spinner.flickity('previous');
+
+            }
+
+            else if(target.is('.spin-left nav a.right')){
+                e.preventDefault();
+                $spinner.flickity('next');
+
+            }
+
+        });
     }
 });

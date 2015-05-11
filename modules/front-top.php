@@ -9,7 +9,10 @@
             </h2>
         </div>
         <div class="front-bins">
-
+            <div class="bin bin-small">
+            </div>
+            <div class="bin bin-large">
+            </div>
         </div>
     </div>
 </section>
