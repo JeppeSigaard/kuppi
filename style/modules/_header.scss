@@ -6,7 +6,7 @@ header{
 }
 
 header nav{
-    max-width: $page-width-max;
+    //max-width: $page-width-max;
     margin:auto;
     //margin-right:100px;
 
@@ -53,8 +53,22 @@ header nav{
 
         &:hover{
             color:white;
-            background:rgba(black,.1);
         }
     }
 }
 
+header .menu-toggle{
+    display: block;
+    width:60px;
+    height:60px;
+    background-size:60px;
+    position:absolute;
+    bottom:10px;
+    right:10px;
+
+    svg{
+        width:60px;
+        height:60px;
+
+    }
+}

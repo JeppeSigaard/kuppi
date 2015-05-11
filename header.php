@@ -34,4 +34,7 @@ $nav_args = array(
            <?php wp_nav_menu($nav_args); ?>
        </ul>
     </nav>
+    <a href="#" class="menu-toggle">
+        <?php include get_template_directory().'/statics/menu.svg'; ?>
+    </a>
 </header>

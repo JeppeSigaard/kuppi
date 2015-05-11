@@ -173,7 +173,7 @@ http://flickity.metafizzy.co
 header { position: relative; box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.3); z-index: 10; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_header\.scss}line{font-family:\000038}}
-header nav { max-width: 1280px; margin: auto; }
+header nav { margin: auto; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_header\.scss}line{font-family:\0000314}}
 header nav ul { font-size: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_header\.scss}line{font-family:\0000318}}
@@ -187,7 +187,12 @@ header nav li#menu-item-home a { font-size: 0; background: url(../statics/logo-l
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_header\.scss}line{font-family:\0000343}}
 header nav a, header nav a:visited { font-size: 24px; color: white; display: block; line-height: 80px; height: 80px; text-align: center; text-transform: uppercase; background: transparent; -webkit-transition: background .3s; transition: background .3s; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_header\.scss}line{font-family:\0000354}}
-header nav a:hover, header nav a:visited:hover { color: white; background: rgba(0, 0, 0, 0.1); }
+header nav a:hover, header nav a:visited:hover { color: white; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_header\.scss}line{font-family:\0000360}}
+header .menu-toggle { display: block; width: 60px; height: 60px; background-size: 60px; position: absolute; bottom: 10px; right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_header\.scss}line{font-family:\0000369}}
+header .menu-toggle svg { width: 60px; height: 60px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/modules\/_design-spinner\.scss}line{font-family:\000031}}
 .design-spinner, .artist-spinner { z-index: 1; height: 0; padding-bottom: 70%; position: relative; box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.3); overflow: hidden; }
@@ -317,7 +322,7 @@ footer { min-height: 400px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_forside\.scss}line{font-family:\000031}}
 .front-banner { color: white; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_forside\.scss}line{font-family:\000034}}
-.front-banner .inner { margin: 0px auto; padding: 100px 0px; font-size: 0; max-width: 1280px; }
+.front-banner .inner { margin: 0px auto; padding: 100px 0px; font-size: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_forside\.scss}line{font-family:\0000310}}
 .front-banner .inner > div { font-size: 12px; display: inline-block; vertical-align: top; width: 100%; }
 @media only screen and (min-width: 480px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kridthusis\/Documents\/lokal\%20server\/kuppi\/wp-content\/themes\/Kuppi\/style\/pages\/_forside\.scss}line{font-family:\0000310}}
