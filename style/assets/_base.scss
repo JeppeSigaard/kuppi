@@ -38,7 +38,7 @@ img{
 header,section,footer,main{
     display: block;
     clear: both;
-    overflow: auto;
+    overflow: visible;
 }
 
 p{
@@ -52,9 +52,16 @@ aside{
     @include font-size;
 }
 
+.content main{
+    padding:10px;
+    @include font-size;
+}
+
 .content{
+    position: relative;
     max-width: $page-width-max;
     margin:0px auto;
+    padding:40px 10px;
 }
 
 
@@ -65,6 +72,12 @@ aside{
         width:66.6666%;
         display: inline-block;
         vertical-align: top;
+    }
+
+    .content-right main{
+
+        float:right;
+
     }
 
     .blogroll aside,

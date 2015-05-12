@@ -9,11 +9,9 @@ $preview = 'large';
     <main>
         <?php
         while(have_posts()) : the_post;
-
         $i++;
         if($i >= 2){$preview = 'medium';}
         if($i >= 3){$preview = 'small';}
-
         ?>
         <a role="article" class="preview preview-<?php echo $preview ?>" id="post-<?php echo $post->ID ?>" href="<?php echo the_permalink(); ?>">
            <div class="inner">

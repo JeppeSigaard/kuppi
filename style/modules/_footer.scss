@@ -1,4 +1,6 @@
 footer{
    @extend .cardboard;
     min-height: 400px;
+    position: relative;
+    z-index:2;
 }
