@@ -1,0 +1,78 @@
+.main-heading-bins{margin:0px auto;}
+.front-bins{margin:20px auto;}
+.front-bins, .main-heading-bins{
+    text-align: center;
+
+    .bin{
+        display: inline-block;
+        position:relative;
+        width:170px;
+        height:170px;
+        margin:0px auto;
+        perspective: 170px;
+
+        .designs{
+            position: absolute;
+            overflow:hidden;
+        }
+
+        .design{
+            position: absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            background-size:cover;
+            background-position:center;
+        }
+    }
+
+    .bin-large{
+        top:21px;
+
+        .designs{
+            top: 23px;
+            left: 14px;
+            right: 11px;
+            bottom: 29px;
+
+        }
+
+        &:after{
+            position:absolute;
+            content:'';
+            z-index:2;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            background:url('../statics/storspand-cutout.png') no-repeat center;
+        }
+
+
+    }
+    .bin-small{
+        top:30px;
+
+
+        .designs{
+            top: 34px;
+            left: 51px;
+            right: 51px;
+            bottom: 17px;
+
+        }
+
+        &:after{
+            position:absolute;
+            content:'';
+            z-index:2;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            background:url('../statics/lillespand-cutout.png') no-repeat center;
+        }
+    }
+
+}

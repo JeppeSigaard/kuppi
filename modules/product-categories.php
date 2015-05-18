@@ -7,7 +7,7 @@ $args = array(
     'pad_counts'   => 0,
     'hierarchical' => 1,
     'title_li'     => '',
-    'hide_empty'   => 0
+    'hide_empty'   => 1
 );
 
 $all_categories = get_categories( $args );

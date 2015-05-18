@@ -11,8 +11,91 @@
 
 .single-product{
 
-    main{
-        min-height:600px;
+    .product-heading{
+        position:relative;
+        overflow: auto;
+
+        main{
+            min-height: 600px;
+            padding-bottom: 120px;
+            position:relative;
+        }
+
+        &:before{
+            z-index:0;
+            content:'';
+            position:absolute;
+            top:300px;
+            left:0;
+            height:calc(100% - 300px);
+            width:100%;
+            background:rgba(black,.5);
+        }
+
+        .main-heading-title{
+            font-size:250%;
+            color:white;
+            margin-top:110px;
+        }
+
+        nav{
+            position:absolute;
+            text-align: center;
+            bottom:30px;
+            left:0;
+            right:0;
+
+            a{
+                display:inline-block;
+                background:$gelb;
+                color:black;
+                box-shadow: $base-shadow;
+                width:60px;
+                height:60px;
+                line-height: 62px;
+                text-align:center;
+                border-radius: 30px;
+                font-size: 250%;
+                margin:0px 20px;
+
+                &.disabled{
+                    background:#999;
+                    color:#ddd;
+                    cursor:default;
+                    opacity:.7;
+                }
+
+                &:after{
+                    position:relative;
+                    content: "\f341";
+                    font-family: 'dashicons';
+                    left:-3px;
+                }
+                &[rel="next"]:after{
+                    content: "\f345";
+                    left:3px;
+                }
+            }
+        }
+
     }
 
+    .product-body{
+        position:relative;
+        background:$body-bg;
+
+        >div{
+            overflow:auto;
+        }
+
+        .main-content-title{
+            font-family: $contrast-font;
+            font-size: 300%;
+            margin:20px 0px;
+        }
+
+        .products{
+            margin-top:100px;
+        }
+    }
 }
