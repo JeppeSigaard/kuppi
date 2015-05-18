@@ -33,7 +33,7 @@ a, a:active, a:visited, a:hover {
   color: inherit;
   text-decoration: none; }
 
-.cardboard, header, header nav, header nav ul li ul, footer {
+.cardboard, header, header nav, footer {
   background: #cc9d7f url("../statics/cardboard.jpg") repeat center; }
 
 html, body {
@@ -306,12 +306,19 @@ http://flickity.metafizzy.co
 header {
   position: relative;
   z-index: 10;
-  min-height: 80px; }
+  min-height: 60px; }
+  @media only screen and (min-width: 768px) {
+    header {
+      min-height: 80px; } }
 
 header nav {
-  background-position: center 80px;
-  box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.3);
-  height: 80px; }
+  background-position: center 200px;
+  height: 60px;
+  box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.3); }
+  @media only screen and (min-width: 768px) {
+    header nav {
+      background-position: center 80px;
+      height: 80px; } }
 
 .home header nav.fixed {
   position: fixed;
@@ -324,11 +331,72 @@ header nav {
 
 header nav {
   position: fixed;
+  -webkit-transition: right .3s;
+          transition: right .3s;
   top: 0;
   right: 0;
-  left: 0; }
+  width: 100%; }
 
+@media only screen and (max-width: 960px) {
+  a#home-btn {
+    display: inline-block;
+    width: 140px;
+    height: 60px;
+    background: url(../statics/logo-lille.png) no-repeat 20px 10px;
+    background-size: 120px; } }
+  @media only screen and (max-width: 960px) and (min-width: 768px) {
+    a#home-btn {
+      width: 280px;
+      height: 80px;
+      background-size: auto; } }
+
+@media only screen and (max-width: 960px) {
+  body {
+    -webkit-transition: margin-left .3s;
+            transition: margin-left .3s;
+    overflow: visible; }
+
+  body.menu-open {
+    margin-left: -200px; }
+
+  header nav > ul {
+    background: #73a1cf;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    right: -200px;
+    -webkit-transition: right .3s;
+            transition: right .3s;
+    width: 200px;
+    text-align: left;
+    font-size: 20px;
+    z-index: 21;
+    color: white;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+    line-height: 1.5;
+    border-left: 2px solid rgba(0, 0, 0, 0.1); }
+    header nav > ul a {
+      display: block;
+      padding: 10px 20px;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+
+  .menu-open header nav ul {
+    right: 0px;
+    -webkit-transition: right .3s;
+            transition: right .3s; }
+
+  .menu-open header nav {
+    right: 200px; }
+
+  .home.menu-open header nav {
+    right: 0px; }
+
+  .home.menu-open header nav.fixed {
+    right: 200px; } }
 @media only screen and (min-width: 960px) {
+  header nav a#home-btn {
+    display: none; }
+
   header nav ul {
     font-size: 0; }
   header nav > ul > li {
@@ -338,17 +406,14 @@ header nav {
     vertical-align: top;
     border: solid white;
     border-width: 0px 1px; }
-    header nav > ul > li:before, header nav > ul > li:after {
+    header nav > ul > li:before {
       position: absolute;
       content: '';
       width: 100%;
-      height: 40px;
-      bottom: -40px;
+      height: 20px;
+      bottom: -20px;
       left: 0px;
       z-index: 0; }
-    header nav > ul > li:after {
-      left: auto;
-      right: 0px; }
     header nav > ul > li:first-child {
       border-width: 0px 1px 0px 0px; }
     header nav > ul > li:last-child {
@@ -374,7 +439,8 @@ header nav {
       position: absolute;
       width: auto;
       z-index: 2;
-      min-width: 100%; }
+      min-width: 100%;
+      background-image: url(../statics/cardboard.jpg); }
       header nav > ul > li ul:after {
         content: '';
         position: absolute;
@@ -403,18 +469,26 @@ header nav {
       color: white; } }
 header .menu-toggle {
   display: block;
-  width: 60px;
-  height: 60px;
-  background-size: 60px;
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
   position: absolute;
   bottom: 10px;
   right: 10px; }
+  header .menu-toggle svg {
+    width: 40px;
+    height: 40px; }
+  @media only screen and (min-width: 768px) {
+    header .menu-toggle {
+      width: 60px;
+      height: 60px;
+      background-size: 60px; }
+      header .menu-toggle svg {
+        width: 60px;
+        height: 60px; } }
   @media only screen and (min-width: 960px) {
     header .menu-toggle {
       display: none; } }
-  header .menu-toggle svg {
-    width: 60px;
-    height: 60px; }
 
 .design-spinner, .artist-spinner {
   z-index: 1;
@@ -1040,4 +1114,5 @@ a.fourohfour {
   a.fourohfour span {
     line-height: 1.4;
     font-size: 120%; }
+
 /*# sourceMappingURL=style.css.map */

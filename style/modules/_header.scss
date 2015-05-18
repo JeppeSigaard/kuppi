@@ -2,20 +2,27 @@ header{
     position: relative;
     @extend .cardboard;
     z-index:10;
-    min-height:80px;
+    min-height:60px;
+    @media only screen and(min-width:768px){
+        min-height:80px;
+    }
+
 }
 
 
 
 header nav {
     @extend .cardboard;
-    background-position:center 80px;
+    background-position:center 200px;
+    height:60px;
+    @media only screen and(min-width:768px){
+        background-position:center 80px;
+        height:80px;
+    }
+
     box-shadow: $base-shadow;
-    height:80px;
 }
-header nav ul li ul{
-    @extend .cardboard;
-}
+
 
 .home header nav.fixed{
     position:fixed;
@@ -30,15 +37,90 @@ header nav ul li ul{
 
 header nav{
     position:fixed;
+    transition:right .3s;
     top:0;
     right:0;
-    left:0;
+    width:100%;
+}
+
+
+@media only screen and(max-width:960px){
+
+    a#home-btn{
+        display: inline-block;
+        width:140px;
+        height:60px;
+        background:url(../statics/logo-lille.png) no-repeat 20px 10px;
+        background-size:120px;
+        @media only screen and(min-width:768px){
+
+            width:280px;
+            height:80px;
+            background-size:auto;
+        }
+
+    }
+
+    body{
+        transition:margin-left .3s;
+        overflow:visible;
+    }
+
+    body.menu-open{
+        margin-left:-200px;
+    }
+
+    header nav>ul{
+        background:$blue;
+        position:fixed;
+        height:100%;
+        top:0;
+        right:-200px;
+        transition:right .3s;
+        width:200px;
+        text-align: left;
+        font-size: 20px;
+        z-index:21;
+        color:white;
+        text-shadow: $subtle-shadow;
+        line-height:1.5;
+        border-left:2px solid rgba(black,.1);
+
+        a{
+            display: block;
+            padding:10px 20px;
+            border-bottom: 2px solid rgba(black,.1);
+        }
+    }
+
+    .menu-open header nav ul{
+        right:0px;
+        transition:right .3s;
+    }
+
+    .menu-open header nav{
+        right:200px;
+    }
+
+    .home.menu-open header nav{
+        right:0px;
+    }
+
+    .home.menu-open header nav.fixed{
+        right:200px;
+    }
+
+
 }
 
 @media only screen and(min-width:960px){
 
-    header nav{
+    header nav a#home-btn{
+        display: none;
+    }
 
+
+    header nav{
 
         ul{
             font-size: 0;
@@ -46,19 +128,14 @@ header nav{
 
         >ul>li{
 
-            &:before, &:after{
+            &:before{
                 position: absolute;
                 content: '';
                 width:100%;
-                height:40px;
-                bottom:-40px;
+                height:20px;
+                bottom:-20px;
                 left:0px;
                 z-index:0;
-            }
-
-            &:after{
-                left:auto;
-                right:0px;
             }
 
             width:25%;
@@ -102,6 +179,7 @@ header nav{
                 width:auto;
                 z-index:2;
                 min-width:100%;
+                background-image: url(../statics/cardboard.jpg);
 
                 &:after{
                     content:'';
@@ -143,19 +221,32 @@ header nav{
 }
 header .menu-toggle{
     display: block;
-    width:60px;
-    height:60px;
-    background-size:60px;
+    width:40px;
+    height:40px;
+    background-size:40px;
     position:absolute;
     bottom:10px;
     right:10px;
-    @media only screen and(min-width:960px){
-        display: none;
-    }
 
     svg{
+        width:40px;
+        height:40px;
+
+    }
+
+    @media only screen and(min-width:768px){
         width:60px;
         height:60px;
+        background-size:60px;
 
+        svg{
+            width:60px;
+            height:60px;
+
+        }
+    }
+
+    @media only screen and(min-width:960px){
+        display: none;
     }
 }

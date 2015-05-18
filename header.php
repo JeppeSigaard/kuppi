@@ -22,11 +22,12 @@ $nav_args = array(
 <header role="navigation">
     <?php if (is_front_page()){get_template_part('modules/front','top');}?>
     <nav>
-       <ul>
-           <?php wp_nav_menu($nav_args); ?>
-       </ul>
+        <a id="home-btn" href="<?php bloginfo('url') ?>"></a>
+        <ul>
+            <?php wp_nav_menu($nav_args); ?>
+        </ul>
+        <a href="#" class="menu-toggle">
+            <?php include get_template_directory().'/statics/menu.svg'; ?>
+        </a>
     </nav>
-    <a href="#" class="menu-toggle">
-        <?php include get_template_directory().'/statics/menu.svg'; ?>
-    </a>
 </header>
