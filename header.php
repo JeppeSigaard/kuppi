@@ -20,17 +20,9 @@ $nav_args = array(
 );
 ?>
 <header role="navigation">
-    <?php if (is_front_page()) : ?>
-    <?php get_template_part('modules/front','top'); ?>
-    <?php endif; ?>
-
+    <?php if (is_front_page()){get_template_part('modules/front','top');}?>
     <nav>
        <ul>
-           <li id="menu-item-home" class="menu-item">
-              <a class="home" href="<?php echo esc_url(get_bloginfo('url')); ?>">
-                <?php echo esc_attr(get_bloginfo('name')); ?>
-            </a>
-           </li>
            <?php wp_nav_menu($nav_args); ?>
        </ul>
     </nav>

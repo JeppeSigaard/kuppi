@@ -1,62 +1,146 @@
 header{
     position: relative;
     @extend .cardboard;
-    box-shadow: $base-shadow;
     z-index:10;
+    min-height:80px;
+}
+
+
+
+header nav {
+    @extend .cardboard;
+    background-position:center 80px;
+    box-shadow: $base-shadow;
+    height:80px;
+}
+header nav ul li ul{
+    @extend .cardboard;
+}
+
+.home header nav.fixed{
+    position:fixed;
+    top:0;
+}
+
+.home header nav{
+    position:absolute;
+    top:auto;
+    bottom:0;
 }
 
 header nav{
-    //max-width: $page-width-max;
-    margin:auto;
-    //margin-right:100px;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+}
+
+@media only screen and(min-width:960px){
+
+    header nav{
 
 
-    ul{
-        font-size: 0;
-    }
-
-    li{
-
-        width:25%;
-        display: inline-block;
-        vertical-align: top;
-        border:solid white;
-        border-width:0px 1px;
-
-        &:first-child{
-            border-width:0px 1px 0px 0px;
+        ul{
+            font-size: 0;
         }
 
+        >ul>li{
 
-        &:last-child{
-            border-width:0px 0px 0px 1px;
+            &:before, &:after{
+                position: absolute;
+                content: '';
+                width:100%;
+                height:40px;
+                bottom:-40px;
+                left:0px;
+                z-index:0;
+            }
+
+            &:after{
+                left:auto;
+                right:0px;
+            }
+
+            width:25%;
+            display: inline-block;
+            position:relative;
+            vertical-align: top;
+            border:solid white;
+            border-width:0px 1px;
+
+            &:first-child{
+                border-width:0px 1px 0px 0px;
+            }
+
+
+            &:last-child{
+                border-width:0px 0px 0px 1px;
+            }
+
+
+            &.home a{
+                font-size:0;
+                background:url(../statics/logo-lille.png) no-repeat center 10px;
+                background-size:165px;
+            }
+
+            &:hover ul{
+                height:auto;
+                opacity:1;
+                top:100%;
+                box-shadow: $base-shadow;
+            }
+
+            ul{
+                top:calc(100% + 10px);
+                opacity:0;
+                transition:opacity .2s, top .2s;
+                transition-delay: .1s;
+                height:0;
+                overflow:hidden;
+                position:absolute;
+                width:auto;
+                z-index:2;
+                min-width:100%;
+
+                &:after{
+                    content:'';
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    right:0;
+                    height:10px;
+                    background:linear-gradient(to bottom, rgba(0,0,0,.3) 0%, rgba(0,0,0,0) 100%);
+                }
+
+                a{
+                    border-bottom: 1px solid white;
+                }
+
+                li:last-child a{
+                    border-bottom:none;
+                }
+
+            }
         }
 
-
-        &#menu-item-home a{
-            font-size:0;
-            background:url(../statics/logo-lille.png) no-repeat center 10px;
-            background-size:165px;
-        }
-    }
-
-    a, a:visited{
-        font-size: 24px;
-        color:white;
-        display: block;
-        line-height:80px;
-        height:80px;
-        text-align: center;
-        text-transform: uppercase;
-        background: transparent;
-        transition:background .3s;
-
-        &:hover{
+        a, a:visited{
+            font-size: 24px;
             color:white;
+            display: block;
+            line-height:80px;
+            height:80px;
+            text-align: center;
+            text-transform: uppercase;
+            background: transparent;
+            transition:background .3s;
+
+            &:hover{
+                color:white;
+            }
         }
     }
 }
-
 header .menu-toggle{
     display: block;
     width:60px;

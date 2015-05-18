@@ -21,4 +21,17 @@ $(function(){
 
     });
 
+    $(window).scroll(function(){
+        var winTop = $(window).scrollTop(),
+            navTop = $('header').height() - $('header nav').height();
+
+        if(winTop >= navTop){
+            $('header nav').addClass('fixed');
+        }
+        else{
+            $('header nav').removeClass('fixed');
+        }
+
+    });
+
 })
