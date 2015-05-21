@@ -17,4 +17,13 @@ remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_ad
 
 // Fjern pris
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+
+
+// Opdater loader
+add_filter('woocommerce_ajax_loader_url', 'woo_custom_cart_loader');
+function woo_custom_cart_loader() {
+  return __(get_template_directory_uri().'/statics/spand.gif', 'woocommerce');
+}
+
+
 ?>

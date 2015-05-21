@@ -1,6 +1,6 @@
 <?php get_header();?>
 <section class="content content-right content-kunstner">
-    <main>
+    <main class="">
         <?php if (have_posts()) : while (have_posts()) : the_post();?>
         <article itemscope itemtype="https://schema.org/Person" <?php post_class(); ?>>
             <span class="inner">
