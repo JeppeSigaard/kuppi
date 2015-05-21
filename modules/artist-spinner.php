@@ -13,7 +13,8 @@ $artists = get_posts(array(
         <div class="artists">
         <?php foreach ($artists as $artist) : ?>
         <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($artist->ID), 'full' );?>
-        <a href="<?php echo get_the_permalink($artist->ID) ?>" class="artist" style="background-image:url(<?php echo $image_url[0] ?>);">
+        <a href="<?php echo get_the_permalink($artist->ID) ?>" class="artist">
+            <figure style="background-image:url(<?php echo $image_url[0] ?>);"></figure>
         </a>
 
         <?php endforeach; ?>

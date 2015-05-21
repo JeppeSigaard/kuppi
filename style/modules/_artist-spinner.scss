@@ -42,13 +42,37 @@
         }
 
         .artist{
+            position:relative;
+            display: block;
             width:33.333%;
-            background-size:cover;
-            background-position: center;
-            opacity:.5;
+
+
+            figure{
+                position:absolute;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                display: block;
+                background-size:cover;
+                background-position: center;
+                opacity:.5;
+                transition:opacity .3s;
+
+            }
+
+            &:hover figure{
+                opacity:1;
+            }
+
+            &:hover:after{
+                opacity:0;
+            }
 
             &:after{
                 content:'';
+                opacity:1;
+                transition:opacity .3s;
                 position:absolute;
                 top:0;
                 left:0;
