@@ -36,6 +36,7 @@
             font-size:250%;
             color:white;
             margin-top:110px;
+            margin-bottom: 30px;
         }
 
         nav{
@@ -97,5 +98,69 @@
         .products-list{
             margin-top:100px;
         }
+    }
+}
+
+
+.quick-buy{
+    a{
+        display: block;
+        margin:10px 0px;
+        transition:color .2s;
+        @media only screen and(min-width:480px){
+            width:49%;
+            display: inline-block;
+        }
+        
+        .name{
+            color:white;
+            margin-bottom:10px;
+            font-size:150%;
+            display: block;
+            @media only screen and(min-width:480px){
+                margin:10px;
+            }
+            
+        }
+        
+
+        div{
+            padding:20px 10px;
+            border-radius: 5px;
+            background:#f0f0f0;
+            background-position:95% 40%;
+            background-repeat:no-repeat;
+            background-size:20px;
+            transition:background .2s;
+            box-shadow: $base-shadow;
+            @media only screen and(min-width:480px){
+                margin:10px;
+            }
+            
+        }
+        
+        .price{
+            float:right;
+        }
+        
+        &:hover{
+            color:white;
+            
+            div{
+                background-color:$gelb;
+            }
+        }
+        
+        &.loading{
+            
+            div{
+                background-image:url(../statics/spand.gif);
+
+            }
+            .price{
+                display: none;
+            }
+        }
+        
     }
 }

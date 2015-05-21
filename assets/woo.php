@@ -25,6 +25,8 @@ function woo_custom_cart_loader() {
   return __(get_template_directory_uri().'/statics/spand.gif', 'woocommerce');
 }
 
+
+
 // Funktion til at hente knapper til hurtigkøb
 function smamo_do_quick_buy($product){
  
@@ -32,7 +34,7 @@ function smamo_do_quick_buy($product){
     
     $variations = $product->get_available_variations();
     $attributes = $product->get_variation_attributes();
-    $i = 0;
+    
     
     foreach($variations as $var):
 
@@ -41,10 +43,18 @@ function smamo_do_quick_buy($product){
     $link .= '&variation_id='.$var['variation_id'];
     foreach ($attributes as $key => $val){
         $link .= '&attribute_'.$key.'='.$var['attributes']['attribute_'.$key];
+        $term_tax = $key;
+        $term_slug = $var['attributes']['attribute_'.$key];
     }
+    $term = get_term_by('slug',$term_slug,$term_tax);
     ?>
+    
     <a href="<?php echo $link ?>">
-        <?php echo $var['price_html']; ?>
+        <span class="name"><?php echo $term->name ?></span>
+        <div>
+            <span class="description"><?php echo $term->description ?></span>
+            <?php echo $var['price_html']; ?>
+        </div>
     </a>
     
     <?php 
