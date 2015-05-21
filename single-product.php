@@ -2,6 +2,7 @@
 <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 <div class="single-bg" style="background-image:url(<?php echo $image_url[0] ?>);"></div>
 <?php while(have_posts()) : the_post(); ?>
+<?php wc_print_notices(); ?>
 <section class="product-heading">
     <div class="inner content content-right">
         <main class="main-heading">
@@ -19,6 +20,7 @@
             </div>
             <h1 class="main-heading-title"><?php the_title(); ?></h1>
             <div class="main-heading-buttons quick-buy">
+            <?php echo smamo_do_quick_buy($product); ?>
             </div>
             <nav class="main-heading-nav">
                 <?php previous_post_link('%link', '', FALSE, ' ', 'product_cat'); ?>
@@ -50,3 +52,5 @@
 </section>
 <?php endwhile; ?>
 <?php get_footer();?>
+
+

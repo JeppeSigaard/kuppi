@@ -25,5 +25,35 @@ function woo_custom_cart_loader() {
   return __(get_template_directory_uri().'/statics/spand.gif', 'woocommerce');
 }
 
+// Funktion til at hente knapper til hurtigkøb
+function smamo_do_quick_buy($product){
+ 
+    ob_start();
+    
+    $variations = $product->get_available_variations();
+    $attributes = $product->get_variation_attributes();
+    $i = 0;
+    
+    foreach($variations as $var):
+
+    $link = get_the_permalink();
+    $link .= '?add-to-cart='.get_the_ID();
+    $link .= '&variation_id='.$var['variation_id'];
+    foreach ($attributes as $key => $val){
+        $link .= '&attribute_'.$key.'='.$var['attributes']['attribute_'.$key];
+    }
+    ?>
+    <a href="<?php echo $link ?>">
+        <?php echo $var['price_html']; ?>
+    </a>
+    
+    <?php 
+    endforeach; 
+    return ob_get_clean();
+    ob_end_clean();
+
+}
+
+
 
 ?>
