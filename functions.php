@@ -6,4 +6,5 @@ require 'assets/menu.php';
 require 'assets/artists.php';
 require 'assets/images.php';
 require 'assets/widgets.php';
+require 'assets/meta-box/index.php';
 ?>

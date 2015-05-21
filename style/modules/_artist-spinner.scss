@@ -2,10 +2,14 @@
     @extend .design-spinner;
     padding-bottom:0;
     background:$blue;
-    height:205px;
+
+    @media only screen and(min-width:768px){
+        height:205px;
+    }
+
+    height:405px;
 
     >.inner{
-        //max-width: $page-width-max;
         margin:0px auto;
         height:inherit;
         position:relative;
@@ -16,6 +20,12 @@
         z-index:1;
         @extend .spin-left;
         background:transparent;
+        height:50%;
+        top:50%;
+        @media only screen and(min-width:768px){
+            height:100%;
+            top:0;
+        }
 
         nav a{
             width:40px;
@@ -36,6 +46,7 @@
         div,.artist{
             width:100%;
             height:100%;
+
             position:absolute;
             display: block;
             left:0;
@@ -44,7 +55,19 @@
         .artist{
             position:relative;
             display: block;
-            width:33.333%;
+            @media only screen and(min-width:640px){
+                width:33.33333%;
+            }
+
+            @media only screen and(min-width:768px){
+                width:50%;
+            }
+
+            @media only screen and(min-width:960px){
+                width:33.33333%;
+            }
+
+            width:50%;
 
 
             figure{
@@ -85,7 +108,11 @@
     }
 
     .artists-heading{
-        height:100%;
+        height:50%;
+        @media only screen and(min-width:768px){
+            height:100%;
+        }
+
         position:absolute;
         width:50%;
         right:25%;
@@ -107,6 +134,7 @@
             text-align: center;
             color:black;
             font-family: $contrast-font;
+            font-size:120%;
             transform:translate(0,-50%);
         }
 
@@ -114,6 +142,8 @@
             margin-top:40px;
             padding-top:20px;
             font-size:110%;
+            width:100%;
+            max-width:320px;
         }
 
         &:before, &:after{

@@ -1,10 +1,12 @@
+$header-menu-height:70px;
+
 header{
     position: relative;
     @extend .cardboard;
     z-index:10;
     min-height:60px;
     @media only screen and(min-width:768px){
-        min-height:80px;
+        min-height:$header-menu-height;
     }
 
 }
@@ -12,12 +14,11 @@ header{
 
 
 header nav {
-    @extend .cardboard;
     background-position:center 200px;
     height:60px;
     @media only screen and(min-width:768px){
-        background-position:center 80px;
-        height:80px;
+        background-position:center $header-menu-height;
+        height:$header-menu-height;
     }
 
     box-shadow: $base-shadow;
@@ -25,17 +26,20 @@ header nav {
 
 
 .home header nav.fixed{
+    @extend .cardboard;
     position:fixed;
     top:0;
 }
 
 .home header nav{
+    background:transparent;
     position:absolute;
     top:auto;
     bottom:0;
 }
 
 header nav{
+    @extend .cardboard;
     position:fixed;
     transition:right .3s;
     top:0;
@@ -55,8 +59,8 @@ header nav{
         @media only screen and(min-width:768px){
 
             width:280px;
-            height:80px;
-            background-size:auto;
+            height:$header-menu-height;
+            background-size:150px;
         }
 
     }
@@ -124,6 +128,7 @@ header nav{
 
         ul{
             font-size: 0;
+            background:transparent;
         }
 
         >ul>li{
@@ -158,7 +163,7 @@ header nav{
             &.home a{
                 font-size:0;
                 background:url(../statics/logo-lille.png) no-repeat center 10px;
-                background-size:165px;
+                background-size:150px;
             }
 
             &:hover ul{
@@ -203,11 +208,11 @@ header nav{
         }
 
         a, a:visited{
-            font-size: 24px;
+            font-size: 18px;
             color:white;
             display: block;
-            line-height:80px;
-            height:80px;
+            line-height:$header-menu-height;
+            height:$header-menu-height;
             text-align: center;
             text-transform: uppercase;
             background: transparent;
@@ -235,13 +240,13 @@ header .menu-toggle{
     }
 
     @media only screen and(min-width:768px){
-        width:60px;
-        height:60px;
+        width:50px;
+        height:50px;
         background-size:60px;
 
         svg{
-            width:60px;
-            height:60px;
+            width:50px;
+            height:50px;
 
         }
     }

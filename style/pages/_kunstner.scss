@@ -1,0 +1,55 @@
+.artist-list{
+
+    @extend .product-categories;
+
+    .inner{
+        background:transparent;
+        box-shadow:none;
+
+    }
+}
+
+.content-kunstner{
+
+    @media only screen and(max-width:480px){
+        figure,.right{
+            width:48%;
+        }
+    }
+
+    figure,.right,.description{
+        display: inline-block;
+        vertical-align: top;
+        padding:10px;
+
+        img{
+            width:auto;
+        }
+    }
+    .right{
+
+        h1{
+            font-size: 175%;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .by{
+            font-family: $contrast-font;
+            font-size:175%;
+        }
+
+        a{
+            display: block;
+            margin-bottom:5px;
+        }
+
+
+    }
+}
+
+.artist-products{
+    font-family:$contrast-font;
+    font-size: 175%;
+    padding:20px 10px 10px;
+}

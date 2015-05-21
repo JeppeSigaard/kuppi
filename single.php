@@ -3,12 +3,13 @@
     <main>
         <?php if (have_posts()) : while (have_posts()) : the_post();?>
         <article <?php post_class(); ?>>
-            <figure>
-                <?php the_post_thumbnail();?>
-            </figure>
             <span class="inner">
                 <h1 class="post-title"><?php the_title();?></h1>
-                <span class="post-meta"><?php the_author();?></span>
+                <div class="post-meta">
+                    <span class="by"><?php the_author();?></span>
+                    <span class="date"><?php the_date(); ?></span>
+                    <!--<span class="time"><?php the_time(); ?></span>-->
+                </div>
                 <?php the_content();?>
             </span>
         </article>

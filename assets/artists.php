@@ -16,7 +16,7 @@ function smamo_add_artists() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => 22,
-		'supports'           => array( 'title', 'thumbnail'),
+		'supports'           => array( 'title', 'thumbnail','editor'),
         'labels'             => array(
 
             'name'               => _x( 'Kunstnere', 'post type general name', 'smamo' ),

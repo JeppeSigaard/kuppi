@@ -3,7 +3,7 @@
 if(!isset($blogroll_posts)){
     $blogroll_posts = get_posts(array(
         'post_type' => 'post',
-        'numberposts'   => 5,
+        'numberposts'   => get_option('posts_per_page'),
     ));
 }
 $i = 0;

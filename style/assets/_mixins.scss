@@ -57,3 +57,9 @@
 @mixin black-bucket-bg{
     background:url(../statics/bucket-black.png) center no-repeat;
 }
+
+
+@mixin loading-bg{
+    background-image:url('../statics/spandgif') center no-repeat;
+    background-size:30px;
+}

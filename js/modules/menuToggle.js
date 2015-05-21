@@ -38,6 +38,9 @@ $(function(){
     $(window).scroll(function(){
         adjustMenu();
     });
+    $(window).resize(function(){
+        adjustMenu();
+    });
 
 })
 
