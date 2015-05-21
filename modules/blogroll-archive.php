@@ -27,6 +27,6 @@ $preview = 'large';
         <?php endwhile; ?>
     </main>
     <aside rel="alternate" role="complementary">
-        <?php dynamic_sidebar('main-widgets'); ?>
+        <?php dynamic_sidebar('widget-2'); ?>
     </aside>
 </section>

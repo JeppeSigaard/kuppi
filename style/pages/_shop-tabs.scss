@@ -1,0 +1,81 @@
+.form-toggle{
+    margin-top:30px;
+    font-size:0;
+    
+    .toggle{
+        position:relative;
+        display: inline-block;
+        width:50%;
+        height:60px;
+        line-height:60px;
+        font-size:24px;
+        font-family:$contrast-font;
+        text-align: center;
+        background:$blue;
+        color:white;
+        z-index:2;
+        box-shadow: $subtle-shadow;
+        transition:background .2s;
+        
+        
+    
+        
+        &.active, &:hover{
+            
+            background:rgba($blue,.9);
+            
+        }
+        
+        
+    }
+    
+}
+
+.woocommerce .form-tabs{
+
+    .tab{
+        padding:20px 0px;
+        display: none;
+        
+        &.active{
+            display: block;
+        }
+        
+        &.quick-buy a{
+            
+            .name{
+                color:black;
+                margin:0px 10px;
+                font-size:18px;
+            }
+            
+            div{
+                background:$green;
+                color:white;
+                padding:15px 10px;
+            }
+        }
+        
+    }
+    
+    label,input{
+        display: block;
+        width:100%;
+        position: relative;
+    }
+    
+    label{
+        margin:15px 0px 5px;
+        
+        &:after{
+            content:'*';
+            color:#f99;
+            margin-left:5px;
+        }
+    }
+    
+    .form-submit{
+        margin:20px 0px;
+        display: block;
+    }
+}

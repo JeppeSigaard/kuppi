@@ -31,6 +31,6 @@ $preview = 'small';
         <?php endforeach; ?>
     </main>
     <aside rel="alternate" role="complementary">
-        <?php dynamic_sidebar('main-widgets'); ?>
+        <?php dynamic_sidebar('widget-3'); ?>
     </aside>
 </section>

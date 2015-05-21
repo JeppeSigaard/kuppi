@@ -15,5 +15,8 @@
         </article>
         <?php endwhile; endif; ?>
     </main>
+    <aside>
+        <?php dynamic_sidebar('widget-2'); ?>
+    </aside>
 </section>
 <?php get_footer();?>

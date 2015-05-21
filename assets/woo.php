@@ -25,6 +25,8 @@ function woo_custom_cart_loader() {
   return __(get_template_directory_uri().'/statics/spand.gif', 'woocommerce');
 }
 
+// Fjern yderligere information
+add_filter('woocommerce_enable_order_notes_field', '__return_false');
 
 
 // Funktion til at hente knapper til hurtigkøb

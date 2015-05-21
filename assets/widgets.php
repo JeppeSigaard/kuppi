@@ -7,13 +7,34 @@ function smartmonkey_widgets_init(){
 
     // Main Widgets
     register_sidebar( array (
-    'name' => __( 'Standard widgetområde', 'smamo' ),
-    'id' => 'main-widgets',
-    'before_widget' => '<div id="%1$s" class="widget-container %2$s front-widget-left">',
+    'name' => __( 'Standard widgetområde for sider', 'smamo' ),
+    'id' => 'widget-1',
+    'before_widget' => '<div class="sidebar-container">',
     'after_widget' => "</div>",
-    'before_title' => '<h3 class="widget-title">',
+    'before_title' => '<h3 class="sidebar-title">',
     'after_title' => '</h3>',
     ) );
+    
+    // Sekundær Widgets
+    register_sidebar( array (
+    'name' => __( 'Widgetområde til blog', 'smamo' ),
+    'id' => 'widget-2',
+    'before_widget' => '<div class="sidebar-container">',
+    'after_widget' => "</div>",
+    'before_title' => '<h3 class="sidebar-title">',
+    'after_title' => '</h3>',
+    ) );
+    
+    // Tertiær Widgets
+    register_sidebar( array (
+    'name' => __( 'Widgetområde til shop', 'smamo' ),
+    'id' => 'widget-3',
+    'before_widget' => '<div class="sidebar-container">',
+    'after_widget' => "</div>",
+    'before_title' => '<h3 class="sidebar-title">',
+    'after_title' => '</h3>',
+    ) );
+    
 
 }
 
