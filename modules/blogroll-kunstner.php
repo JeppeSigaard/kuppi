@@ -7,7 +7,7 @@ if(!isset($blogroll_posts)){
     ));
 }
 $i = 0;
-$preview = 'small';
+$preview = 'medium';
 ?>
 
 
