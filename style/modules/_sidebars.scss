@@ -1,14 +1,26 @@
 .sidebar-container{
-    
-    background:#fcc;
-    border:3px dashed rgba(0,0,0,.4);
     padding:10px;
     
     
     h3{
+        font-size: 175%;
+        font-family: $contrast-font;
+        padding: 0px 0px 10px;
+        margin: 0px 0px 10px;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
     
     }
     
+    
+    .product-categories, .artist-list {
+        width: auto;
+        position: relative; 
+        padding: 0px; 
+        max-width: 350px;
+        top: 130px;
+        top:0;
+        z-index: 2;
+    }
     
     
 }

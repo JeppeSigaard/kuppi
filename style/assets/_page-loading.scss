@@ -1,0 +1,58 @@
+@keyframes animateBgSize{
+
+    from{background-size:0px;font-size:0%;}
+    to{background-size:30px;font-size:200%;}
+    
+}
+
+@keyframes animateBgSize2{
+
+    to{background-size:0px;font-size:0%;}
+    from{background-size:30px;font-size:200%;}
+    
+}
+
+body:before{
+    content:'';
+}
+
+
+
+body.loading-screen{
+    height:100%;
+    overflow:hidden;
+    
+    &:before{
+        content:'Elsk dit affald';
+        font-family: $contrast-font;
+        position:fixed;
+        z-index:2000;
+        line-height:90vh;
+        font-size: 0%;
+        text-align: center;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:$body-bg url(../statics/spand.gif) center no-repeat;
+        background-size:0px;
+        transition: background-size 0s;
+        animation:animateBgSize .3s;
+        animation-fill-mode: forwards;
+        animation-delay: .4s;
+        animation-timing-function: cubic-bezier(.33, 1.45, .85, .83);
+        
+    }
+    
+}
+
+body.loading-screen.loading-screen-end:before{
+    background-size:30px;
+    font-size: 200%;
+    opacity:0;
+    transition: opacity .6s cubic-bezier(.91, -0.13, .37, 1.17);
+    animation:animateBgSize2 .3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+    animation-timing-function: cubic-bezier(.67, -0.39, .93, 1.17);
+}

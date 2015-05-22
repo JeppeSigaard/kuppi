@@ -5,3 +5,4 @@
 // @koala-append 'modules/ajaxForm.js';
 // @koala-append 'modules/quickbuy.js';
 // @koala-append 'modules/shop-tabs.js';
+// @koala-append 'modules/loadingScreen.js';

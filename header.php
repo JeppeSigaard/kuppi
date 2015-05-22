@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+    <script>kuppiLoadPage = setTimeout(function(){document.getElementsByTagName('body')[0].className+=" loading-screen";},400);</script>
     <?php wp_head();?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
