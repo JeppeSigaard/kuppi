@@ -30,7 +30,8 @@ get_header();
         <?php endwhile; endif; ?>
     </main>
     <aside rel="alternate" role="complementary">
-        <?php dynamic_sidebar('widget-2'); ?>
+       <?php get_template_part('modules/blog','cats');?>
+       <?php dynamic_sidebar('widget-2'); ?>
     </aside>
 </section>
 <?php get_footer();?>

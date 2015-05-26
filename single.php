@@ -16,6 +16,7 @@
         <?php endwhile; endif; ?>
     </main>
     <aside>
+        <?php get_template_part('modules/blog','cats');?>
         <?php dynamic_sidebar('widget-2'); ?>
     </aside>
 </section>
