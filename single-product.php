@@ -51,7 +51,7 @@
                             <h3>Vælg størrelse</h3>
                         </a>
                         <a class="toggle toggle-2" href="#">
-                            <h3>Mål selv</h3>
+                            <h3>Bestil speciel</h3>
                         </a>
                     </div>
                 <div class="form-tabs">
@@ -59,28 +59,33 @@
                         <?php echo smamo_do_quick_buy($product); ?>
                     </div>
                     <div class="tab tab-2">
-                        <div class="b-width">
-                            <label for="w">Bredde</label>
-                            <input type="number" name="w" placeholder="80cm - 240cm">
+                        <p>Har du dit eget design, eller en helt speciel affaldscontainer? Hos os kan du få det lige som du vil have det. Herunder kan du oprette og en anmodning om en helt speciel ordre. Anmodningen sendes med det samme, og vi besvarer den hurtigst muligt. Hvis du samtidig opretter en bruger, er det nemt at gennemføre ordren, når alt er på plads.</p>
+                        <div class="form-container">
+                            <div>
+                                <label for="name">Dit navn</label>
+                                <input type="text" name="name" placeholder="Peter Jensen" required>
+                            </div>
+                            <div>
+                                <label for="email">Din email</label>
+                                <input type="email" name="email" placeholder="hej@peterjensen.dk" required>
+                            </div>
+                            <div>
+                                <label for="email">Opret et login samtidig: skriv et kodeord</label>
+                                <input type="password" name="password" placeholder="··········" autocomplete="off">
+                            </div>
+                            <div>
+                                <label for="description">Beskriv dine særlige behov</label>
+                                <textarea name="description" placeholder="Jeg skal bruge..."></textarea>
+                            </div>
+                            <div>
+                                <a href="#" class="form-submit">Send anmodning nu</a>
+                            </div>
                         </div>
-                        <div class="b-depth">
-                            <label for="d-top">Dybde, spandens top</label>
-                            <input type="number" name="d-top" placeholder="80cm - 240cm">
-                        </div>
-                        <div class="b-depth">
-                            <label for="d-bottom">Dybde, spandens bund</label>
-                            <input type="number" name="d-bottom" placeholder="80cm - 240cm">
-                        </div>
-                        <div class="b-height">
-                            <label for="h">Højde</label>
-                            <input type="number" name="h" placeholder="80cm - 240cm">
-                        </div>
-                        <a href="#" class="form-submit button">Læg i kurv</a>
                     </div>
                 </div>
             </form>
-
             <?php get_template_part('modules/products','list');?>
+            
         </main>
         <aside>
             <?php echo get_template_part('modules/product','categories'); ?>

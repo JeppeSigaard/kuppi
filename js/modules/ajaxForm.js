@@ -18,6 +18,8 @@ function returnForm(response){
 }
 
 $(function(){
+    
+    autosize($('textarea[name="description"]'));
 
     $('form').on('click',function(e){
         var target = $(e.target);

@@ -22,7 +22,7 @@
         
         &.active, &:hover{
             
-            background:rgba($blue,.9);
+            background:rgba($blue,.85);
             
         }
         
@@ -32,6 +32,7 @@
 }
 
 .woocommerce .form-tabs{
+    position: relative;
 
     .tab{
         padding:20px 0px;
@@ -58,10 +59,25 @@
         
     }
     
-    label,input{
+    label,input,textarea{
         display: block;
         width:100%;
         position: relative;
+        outline:none;
+        border:1px solid transparent;
+        
+        &:focus{
+            border:1px solid $green;
+        }
+        
+        &.error{
+            border: 1px solid $red;
+        }
+    }
+    
+    textarea{
+        resize: none;
+        min-height:92px;
     }
     
     label{
@@ -77,5 +93,26 @@
     .form-submit{
         margin:20px 0px;
         display: block;
+        background:$green;
+        color:white;
+        padding:20px;
+        text-align: center;
+        border-radius: 6px;
+        position: relative;
+        
+        &:after{
+            content:'';
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background:transparent;
+            transition:background .2s;
+        }
+        
+        &:hover:after{
+            background:rgba(white,.2);
+        }
     }
 }
