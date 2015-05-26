@@ -1,12 +1,17 @@
 <?php
 $term_array = array();
 $terms = get_the_terms($post->ID,'product_cat');
-foreach($terms as $term){array_push($term_array, $term->term_id);}
 
 $prod_q = new WP_query( array(
     'post_type'     => 'product',
     'post__not_in'  => array($post->ID),
-    'category__in'  => $term_array,
+    'tax_query'     => array(
+        array(
+			'taxonomy' => 'product_cat',
+			'field'    => 'id',
+			'terms'    => $terms[0]->term_id,
+		),
+    ),
 
 ));
 
