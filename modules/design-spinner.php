@@ -2,7 +2,8 @@
 
 $products = get_posts(array(
     'post_type' => 'product',
-    'numberposts'   => -1,
+    'numberposts'   => 6,
+    'orderby'   => 'RAND',
 ));
 
 
@@ -21,7 +22,7 @@ $products = get_posts(array(
     <div class="designs">
     <?php foreach ($products as $prod) : ?>
     <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($prod->ID), 'full' );?>
-    <div class="design design-<?php echo $prod->ID ?>" style="background-image:url(<?php echo $image_url[0]; ?>);"></div>
+    <div class="design design-<?php echo $prod->ID ?> lazy" data-bg-image="<?php echo $image_url[0]; ?>"></div>
     <?php endforeach; ?>
     </div>
 </section>

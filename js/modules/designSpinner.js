@@ -31,10 +31,12 @@ $(function(){
 
         var flkty = $spinner.data('flickity');
 
-        $spinner.on( 'settle', function() {
-
+        $spinner.on( 'cellSelect', function() {
+            console.log( 'Flickity select ' + flkty.selectedIndex );
             $spinLarge.flickity('select', flkty.selectedIndex);
             $spinSmall.flickity('select', flkty.selectedIndex);
+        }).on( 'settle', function() {
+
         });
 
 
