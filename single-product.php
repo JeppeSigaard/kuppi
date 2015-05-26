@@ -1,5 +1,5 @@
 <?php get_header();?>
-<?php $image_url_small = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'preview-small' );?>
+<?php $image_url_small = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'preview-wider' );?>
 <?php $image_url_narrow = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'preview-narrow' );?>
 <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'sixteen-nine' );?>
 <div class="single-bg" style="background-image:url(<?php echo $image_url[0] ?>);"></div>
