@@ -6,3 +6,4 @@
 // @koala-append 'modules/quickbuy.js';
 // @koala-append 'modules/shop-tabs.js';
 // @koala-append 'modules/loadingScreen.js';
+// @koala-append 'modules/movdownifmessage.js';
