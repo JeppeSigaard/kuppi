@@ -32,7 +32,6 @@ $(function(){
         var flkty = $spinner.data('flickity');
 
         $spinner.on( 'cellSelect', function() {
-            console.log( 'Flickity select ' + flkty.selectedIndex );
             $spinLarge.flickity('select', flkty.selectedIndex);
             $spinSmall.flickity('select', flkty.selectedIndex);
         }).on( 'settle', function() {
@@ -58,4 +57,20 @@ $(function(){
 
         });
     }
+    
+    $(window).load(function(){
+        
+        $('.design.lazy').each(function(){
+            var elem = $(this),
+                img = $('<img/>'),
+                attr = elem.attr('data-bg-image');;
+            
+            img.attr('src',attr);
+            img.load(function(){
+                elem.css('background-image','url('+attr+')').removeClass('lazy');
+            });
+            
+        });
+        
+    });
 });
