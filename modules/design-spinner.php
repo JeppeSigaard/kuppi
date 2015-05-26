@@ -21,7 +21,7 @@ $products = get_posts(array(
     </div>
     <div class="designs">
     <?php foreach ($products as $prod) : ?>
-    <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($prod->ID), 'full' );?>
+    <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($prod->ID), 'sixteen-nine' );?>
     <div class="design design-<?php echo $prod->ID ?> lazy" data-bg-image="<?php echo $image_url[0]; ?>"></div>
     <?php endforeach; ?>
     </div>
