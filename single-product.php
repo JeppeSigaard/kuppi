@@ -60,6 +60,7 @@
                     </div>
                     <div class="tab tab-2">
                         <p>Har du dit eget design, eller en helt speciel affaldscontainer? Hos os kan du få det lige som du vil have det. Herunder kan du oprette og en anmodning om en helt speciel ordre. Anmodningen sendes med det samme, og vi besvarer den hurtigst muligt. Hvis du samtidig opretter en bruger, er det nemt at gennemføre ordren, når alt er på plads.</p>
+                       
                         <div class="form-container">
                             <div>
                                 <label for="name">Dit navn</label>

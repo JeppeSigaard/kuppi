@@ -58,13 +58,18 @@
         }
         
     }
+
+    input,textarea{
+        border:1px solid rgba(0,0,0,.1);
+        transition:border .2s;
+    }
     
     label,input,textarea{
         display: block;
         width:100%;
         position: relative;
         outline:none;
-        border:1px solid transparent;
+
         
         &:focus{
             border:1px solid $green;
@@ -114,5 +119,40 @@
         &:hover:after{
             background:rgba(white,.2);
         }
+    }
+    
+    .form-container{
+        position:relative;
+        padding:20px;
+        background:rgba(white,.6);
+        
+        
+        &.loading:before{
+            display: block;
+            z-index:100000;
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            content:'';
+            background:rgba(white,.7) url('../statics/spand.gif') center no-repeat;
+            background-size:20px;
+        }
+        
+        &.complete{
+            padding:0;
+            background:transparent;
+            
+            div,a{
+                display: none;
+                
+                &.woocommerce-message{
+                    display: block;
+                }
+            }
+            
+        }
+    
     }
 }
