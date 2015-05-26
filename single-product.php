@@ -1,5 +1,6 @@
 <?php get_header();?>
 <?php $image_url_small = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'preview-small' );?>
+<?php $image_url_narrow = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'preview-narrow' );?>
 <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'sixteen-nine' );?>
 <div class="single-bg" style="background-image:url(<?php echo $image_url[0] ?>);"></div>
 <?php while(have_posts()) : the_post(); ?>
@@ -10,7 +11,7 @@
             <div class="main-heading-bins">
                 <div class="bin bin-small">
                     <div class="designs">
-                        <div class="design design-<?php the_ID() ?>" style="background-image: url(<?php echo $image_url_small[0] ?>);"></div>
+                        <div class="design design-<?php the_ID() ?>" style="background-image: url(<?php echo $image_url_narrow[0] ?>);"></div>
                     </div>
                 </div>
                 <div class="bin bin-large">
