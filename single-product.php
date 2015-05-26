@@ -25,11 +25,11 @@
             <?php echo smamo_do_quick_buy($product); ?>
             </div>
             <nav class="main-heading-nav">
-                <?php previous_post_link('%link', '', FALSE, ' ', 'product_cat'); ?>
+                <?php previous_post_link('%link', '', TRUE, ' ', 'product_cat'); ?>
                 <?php if(get_previous_post_link() == '') : ?>
                 <a href="#" class="disabled" rel="prev"></a>
                 <?php endif; ?>
-                <?php next_post_link('%link', '', FALSE, ' ', 'product_cat');?>
+                <?php next_post_link('%link', '', TRUE, ' ', 'product_cat');?>
                 <?php if(get_next_post_link() == '') : ?>
                 <a href="#" class="disabled" rel="next"></a>
                 <?php endif; ?>
