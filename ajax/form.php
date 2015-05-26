@@ -65,7 +65,7 @@ else{
     
     $user = wp_insert_user(array(
         
-        'role' => 'costumer',
+        'role' => 'customer',
         'user_pass' => $password,
         'user_login' => $name,
         'user_email' => $email,
