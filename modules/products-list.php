@@ -1,7 +1,8 @@
 <?php
 $prod_q = new WP_query( array(
-    'post_type' => 'product',
-    'post__not_in'   => array($post->ID),
+    'post_type'     => 'product',
+    'post__not_in'  => array($post->ID),
+    'category__in'  => wp_get_post_categories( $post->ID ),
 
 ));
 
