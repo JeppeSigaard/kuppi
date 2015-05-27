@@ -1,6 +1,71 @@
 footer{
    @extend .cardboard;
-    min-height: 400px;
+    padding:60px 10px;
     position: relative;
     z-index:2;
+    
+    .inner{
+        max-width: $page-width-max;
+        margin:auto;
+        position:relative;
+        font-size: 0;
+    }
+
+    .sidebar-container{
+        @include font-size;
+        vertical-align: top;
+        color:white;
+        
+        div.box{
+            background-color: $body-bg;
+            padding: 10px 10px 30px;
+            box-shadow: $base-shadow;
+            border: 2px dashed $green;
+            line-height:1.4;
+            color:black;
+        }
+        
+        @media only screen and(min-width:480px){
+            display: inline-block;
+            width:50%;
+            padding:10px;
+            
+        }
+        
+        @media only screen and(min-width:768px){
+            width:33.33333%;
+            
+        }
+        
+        ul li a{
+            
+            display: block;
+            height:40px;
+            line-height: 40px;
+            padding:0px 10px;
+            background:$green;
+            color:white;
+            margin:4px 0px;
+            border-radius:6px;
+            box-shadow: $subtle-shadow;
+            
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        
+        a:hover{
+                text-decoration: underline;
+            }
+    }
+    
+    h3.sidebar-title{
+        
+          border-bottom: 1px solid white;
+    
+    }
+
+
 }
+
+

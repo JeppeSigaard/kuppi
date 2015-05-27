@@ -58,15 +58,12 @@
             left:0;
             right:0;
             @media only screen and(min-width:768px){
-                padding:0px 10px;
+                
             }
 
             a{
                 display:inline-block;
                 background:$gelb;
-                @media only screen and(min-width:480px){
-                    float:left;
-                }
                 
                 color:black;
                 box-shadow: $base-shadow;
@@ -77,6 +74,10 @@
                 border-radius: 30px;
                 font-size: 250%;
                 margin:0px 20px;
+                
+                @media only screen and(min-width:480px){
+                    float:left;
+                }
 
                 
                 &[rel="next"]{

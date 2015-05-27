@@ -35,6 +35,17 @@ function smartmonkey_widgets_init(){
     'after_title' => '</h3>',
     ) );
     
+    
+    // Footer Widgets
+    register_sidebar( array (
+    'name' => __( 'Footerens widgetområde', 'smamo' ),
+    'id' => 'widget-footer',
+    'before_widget' => '<div class="sidebar-container">',
+    'after_widget' => "</div>",
+    'before_title' => '<h3 class="sidebar-title">',
+    'after_title' => '</h3>',
+    ) );
+    
 
 }
 
