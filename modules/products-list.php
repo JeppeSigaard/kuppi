@@ -5,6 +5,7 @@ $terms = get_the_terms($post->ID,'product_cat');
 $prod_q = new WP_query( array(
     'post_type'     => 'product',
     'post__not_in'  => array($post->ID),
+    'post_per_page' => -1,
     'tax_query'     => array(
         array(
 			'taxonomy' => 'product_cat',

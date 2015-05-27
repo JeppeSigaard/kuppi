@@ -1,4 +1,5 @@
 <?php get_header();?>
+<?php $query->set( 'posts_per_page', -1 ); ?>
 <section class="blogroll content-right">
     <main>
         <ul class="products-list">
