@@ -1,5 +1,5 @@
 // @koala-prepend 'assets/flickity.js';
-// @koala-prepend 'assets/autosize.js';
+// @koala-prepend 'assets/autosize$.js';
 // @koala-append 'modules/designSpinner.js';
 // @koala-append 'modules/artistSpinner.js';
 // @koala-append 'modules/menuToggle.js';

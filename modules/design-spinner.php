@@ -20,9 +20,12 @@ $products = get_posts(array(
         </nav>
     </div>
     <div class="designs">
-    <?php foreach ($products as $prod) : ?>
+    <?php $i = 0; foreach ($products as $prod) : ?>
     <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($prod->ID), 'sixteen-nine' );?>
+    <?php $i++; if($i == 1) : ?> 
+    <div class="design design-<?php echo $prod->ID ?>" style="background-image:url(<?php echo $image_url[0]; ?>);"></div>
+    <?php else : ?>
     <div class="design design-<?php echo $prod->ID ?> lazy" data-bg-image="<?php echo $image_url[0]; ?>"></div>
-    <?php endforeach; ?>
+    <?php endif; endforeach; ?>
     </div>
 </section>
