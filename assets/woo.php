@@ -66,6 +66,6 @@ function smamo_do_quick_buy($product){
 
 }
 
-
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 999;' ), 20 );
 
 ?>

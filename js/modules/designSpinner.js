@@ -63,7 +63,7 @@ $(function(){
         $('.design.lazy').each(function(i){
             var elem = $(this),
                 img = $('<img/>'),
-                attr = elem.attr('data-bg-image');;
+                attr = elem.attr('data-bg-image');
             
             img.attr('src',attr);
             img.load(function(){

@@ -22,7 +22,6 @@
             height:100%;
             top:0;
             left:0;
-            background-size:cover;
             background-position:center;
         }
     }
@@ -35,6 +34,10 @@
             left: 14px;
             right: 11px;
             bottom: 29px;
+            
+            .design{
+                background-size:120px;
+            }
 
         }
 
@@ -60,6 +63,10 @@
             left: 51px;
             right: 51px;
             bottom: 17px;
+            
+            .design{
+                background-size:120px;
+            }
 
         }
 
