@@ -6,8 +6,26 @@
     .bin{
         display: inline-block;
         position:relative;
-        width:170px;
-        height:170px;
+        width:120px;
+        height:120px;
+        
+        &:after{
+            background-size: auto 120px;
+            background-repeat: no-repeat;
+            background-position: center;
+            @media only screen and(min-width:480px){
+                 background-size: auto 170px;
+            }
+            
+        }
+        
+        @media only screen and(min-width:480px){
+        
+            width:170px;
+            height:170px;
+            
+        }
+        
         margin:0px auto;
         perspective: 170px;
 
@@ -31,10 +49,18 @@
         top:21px;
 
         .designs{
-            top: 23px;
-            left: 14px;
-            right: 11px;
-            bottom: 29px;
+            
+            top: 16px;
+            left: 8px;
+            right: 7px;
+            bottom: 19px;
+            
+            @media only screen and(min-width:480px){
+                top: 23px;
+                left: 14px;
+                right: 11px;
+                bottom: 29px;
+            }
 
         }
 
@@ -46,20 +72,30 @@
             right:0;
             bottom:0;
             left:0;
-            background:url('../statics/storspand-cutout.png') no-repeat center;
+            background-image:url('../statics/storspand-cutout.png');
         }
 
 
     }
     .bin-small{
-        top:30px;
+        top:22px;
 
 
         .designs{
-            top: 34px;
-            left: 51px;
-            right: 51px;
-            bottom: 17px;
+            
+            top: 18px;
+            left: 33px;
+            right: 32px;
+            bottom: 5px;
+            
+            @media only screen and(min-width:480px){
+                
+                top: 24px;
+                left: 47px;
+                right: 45px;
+                bottom: 6px;
+            
+            }
         }
 
         &:after{
@@ -70,7 +106,7 @@
             right:0;
             bottom:0;
             left:0;
-            background:url('../statics/lillespand-cutout.png') no-repeat center;
+            background-image:url('../statics/lillespand-cutout.png');
         }
     }
 
