@@ -1,4 +1,10 @@
-.main-heading-bins{margin:0px auto;}
+.main-heading-bins{
+    margin:-40px auto;
+    @media only screen and(min-width:480px){
+        margin:0px auto;
+    }
+    
+}
 .front-bins{margin:20px auto;}
 .front-bins, .main-heading-bins{
     text-align: center;
