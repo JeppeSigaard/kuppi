@@ -63,14 +63,7 @@ else if(!$description){$response['error'] = 'Beskriv dine ønsker. Du kan bruge 
 else{
     
     
-    $user = wp_insert_user(array(
-        
-        'role' => 'Customer',
-        'user_pass' => $password,
-        'user_login' => $name,
-        'user_email' => $email,
-    
-    ));
+    $user = wp_create_user($name, $password, $email);
     
     // Hvis fejl, returner og exit.
     if(is_wp_error($user)){
@@ -81,13 +74,57 @@ else{
     
     }
     
+    // opdater rolle
+    $u = new WP_User( $user );
+    $u->add_role('customer');
     
     
+    wp_logout();
+    $login = wp_signon(array(
+        'user_login' => $name,
+        'user_password' => $password,
+    ));
+    
+    // Hvis fejl, returner og exit.
+    if(is_wp_error($login)){
+        
+        $response['error'] = $login->get_error_message();
+        echo json_encode($response);
+        exit;
+    
+    }
+    
+    
+    
+    $new_order = wp_insert_post(array(
+    
+        'post_type' => 'shop_order',
+        'post_status' => 'wc-processing',
+        'post_author' => $user,
+        
+        
+    ),true);
+    
+    
+    // Hvis fejl, returner og exit.
+    if(is_wp_error($new_order)){
+        
+        $response['error'] = $new_order->get_error_message();
+        echo json_encode($response);
+        exit;
+    
+    }
+    update_post_meta($new_order,'_customer_user',$user);
+    $order = new WC_order($new_order);
+    $product = new WC_product($product_id);
+    
+    $order->add_product($product,1,array());
+    $order->add_order_note($description,'1');
     
     
    
     $response['success'] = 'Meddelelsen er sendt<br/><br/> Du vil modtage en bekræftelsesemail på den indtastede mailadresse.';
-
+    
 }
 
 
