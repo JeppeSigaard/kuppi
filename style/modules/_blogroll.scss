@@ -100,3 +100,57 @@
     }
 
 }
+
+
+.blog-next-prev-link{
+    font-size:0;
+    width:180px;
+    margin:auto;
+    
+    .inner{
+        position: relative;
+        padding:0px 10px;
+        height:60px;
+        vertical-align: top;
+        display: inline-block;
+        width:50%;
+        @include font-size;
+        
+        &:before{
+            content:'';
+            background:rgba(black,.2);
+            position:absolute;
+            top:0px;
+            left:10px;
+            z-index:0;
+            height:60px;
+            width:60px;
+            border-radius:60px;
+        }
+        
+        a{
+            display: block;
+            position:relative;
+             z-index:1;
+            background:$gelb;
+            box-shadow: $base-shadow;
+            color:white;
+            height:60px;
+            width:60px;
+            border-radius:60px;
+            line-height: 60px;
+            text-align: center;
+            font-size:150%;
+            
+            span{
+                font-size: 170%;
+                text-align: center;
+                display: block;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+            }
+        
+        }
+    }
+}
