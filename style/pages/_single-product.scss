@@ -17,7 +17,6 @@
 
         main{
             min-height: 600px;
-            padding-bottom: 120px;
             position:relative;
         }
 
@@ -25,9 +24,9 @@
             z-index:0;
             content:'';
             position:absolute;
-            top:180px;
+            top:250px;
             left:0;
-            height:calc(100% - 180px);
+            height:calc(100% - 250px);
             @media only screen and(min-width:480px){
                 top:300px;
                 height:calc(100% - 300px);
@@ -40,20 +39,35 @@
         .main-heading-title{
             font-size:250%;
             color:white;
-            margin-top:110px;
+            margin-top:200px;
+            @media only screen and(min-width:480px){
+                margin-top:110px;
+            }
+            
             margin-bottom: 30px;
         }
 
         nav{
             position:absolute;
             text-align: center;
-            bottom:30px;
+            top:130px;
+            @media only screen and(min-width:480px){
+                top:100px;
+            }
+            
             left:0;
             right:0;
+            @media only screen and(min-width:768px){
+                padding:0px 10px;
+            }
 
             a{
                 display:inline-block;
                 background:$gelb;
+                @media only screen and(min-width:480px){
+                    float:left;
+                }
+                
                 color:black;
                 box-shadow: $base-shadow;
                 width:60px;
@@ -64,6 +78,14 @@
                 font-size: 250%;
                 margin:0px 20px;
 
+                
+                &[rel="next"]{
+                    @media only screen and(min-width:480px){
+                        float:right;
+                    }
+                    
+                }
+                
                 &.disabled{
                     background:#999;
                     color:#ddd;

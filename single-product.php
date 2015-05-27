@@ -20,10 +20,6 @@
                     </div>
                 </div>
             </div>
-            <h1 class="main-heading-title"><?php the_title(); ?></h1>
-            <div class="main-heading-buttons quick-buy">
-            <?php echo smamo_do_quick_buy($product); ?>
-            </div>
             <nav class="main-heading-nav">
                 <?php previous_post_link('%link', '', TRUE, ' ', 'product_cat'); ?>
                 <?php if(get_previous_post_link() == '') : ?>
@@ -34,6 +30,10 @@
                 <a href="#" class="disabled" rel="next"></a>
                 <?php endif; ?>
             </nav>
+            <h1 class="main-heading-title"><?php the_title(); ?></h1>
+            <div class="main-heading-buttons quick-buy">
+            <?php echo smamo_do_quick_buy($product); ?>
+            </div>
         </main>
     </div>
 </section>
