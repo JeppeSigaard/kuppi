@@ -42,11 +42,12 @@ if ( $custom_query->have_posts() ) :
                 </div>
             </div>
         </a>
-   <?php endwhile; endif;?>
+   <?php endwhile; endif; if(!is_front_page()) :?>
 <div class="blog-next-prev-link">
     <div class="inner"><?php previous_posts_link('<span class="dashicons dashicons-arrow-left-alt2"></span>'); ?></div>
     <div class="inner"><?php next_posts_link('<span class="dashicons dashicons-arrow-right-alt2"></span>'); ?></div>
 </div>
+<?php endif; ?>
 
 <?php wp_reset_postdata(); ?>
 </main>
