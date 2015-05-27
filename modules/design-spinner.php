@@ -2,7 +2,7 @@
 
 $products = get_posts(array(
     'post_type' => 'product',
-    'numberposts'   => 6,
+    'numberposts'   => 12,
     'orderby'   => 'RAND',
 ));
 
