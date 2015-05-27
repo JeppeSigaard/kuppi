@@ -31,9 +31,13 @@ $(function(){
 
         var flkty = $spinner.data('flickity');
 
+        $('.spin-left a.click-here').attr('href',$('.design.is-selected').attr('data-url'));
         $spinner.on( 'cellSelect', function() {
             $spinLarge.flickity('select', flkty.selectedIndex);
             $spinSmall.flickity('select', flkty.selectedIndex);
+            
+            $('.spin-left a.click-here').attr('href',$('.design.is-selected').attr('data-url')).html($('.design.is-selected').attr('data-title'));
+            
         }).on( 'settle', function() {
 
         });
