@@ -144,12 +144,17 @@
             padding:0;
             background:transparent;
             
-            div,a{
+            div,a:not(.show){
                 display: none;
                 
                 &.woocommerce-message{
                     display: block;
                 }
+            }
+            
+            .show{
+                font-weight: 700;
+                text-emphasis: underline;
             }
             
         }

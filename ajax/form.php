@@ -37,25 +37,50 @@ $description = (isset($_POST['description']) && !empty($_POST['description']))
     : false ;
 
 
+/*----------------------*/
+/* Eksisterende brugerr */
+/*----------------------*/
 
-/*--------------------------------*/
-/* ERROR: returner fejlmeddelelse */
-/*--------------------------------*/
+if(is_user_logged_in()){
+    $existing_user = wp_get_current_user();
+    
+    $name = $existing_user->display_name;
+    $email = $existing_user->email;
+    $user = $existing_user->ID;
+    
+    if(!$product_id){
+        $response['error'] = 'Noget gik galt, prøv venligst igen.';
+        echo json_encode($response);
+        exit;
+    }
+    
+    if(!$description){
+        $response['error'] = 'Beskriv dine ønsker. Du kan bruge så få eller så mange ord du har lyst til.';
+        echo json_encode($response);
+        exit;
+    }
+    
+    
+}
+
+/*-----------*/
+/* Ny bruger */
+/*-----------*/
 
 // Indtast navn
-if(!$name){$response['error'] = 'Angiv et navn';}
+elseif(!$name){$response['error'] = 'Angiv et navn';}
 
 // Indtast korrekt email
-else if(!$email || !is_email($email)){$response['error'] = 'Angiv en gyldig emailadresse';}
+elseif(!$email || !is_email($email)){$response['error'] = 'Angiv en gyldig emailadresse';}
 
 // Indtast et password
-else if(!$password){$response['error'] = 'Password <strong>skal</strong> angives og bruges til at oprette en support-ticket.';}
+elseif(!$password){$response['error'] = 'Password <strong>skal</strong> angives og bruges til at oprette en support-ticket.';}
 
 // produktid mangler (systemfejl)
-else if(!$product_id){$response['error'] = 'Noget gik galt, prøv venligst igen.';}
+elseif(!$product_id){$response['error'] = 'Noget gik galt, prøv venligst igen.';}
 
 // Indtast beskrivelse
-else if(!$description){$response['error'] = 'Beskriv dine ønsker. Du kan bruge så få eller så mange ord du har lyst til.';}
+elseif(!$description){$response['error'] = 'Beskriv dine ønsker. Du kan bruge så få eller så mange ord du har lyst til.';}
 
 /*------------------------------------*/
 /* SUCCESS: opret bruger og send mail */
@@ -78,8 +103,6 @@ else{
     $u = new WP_User( $user );
     $u->add_role('customer');
     
-    
-    wp_logout();
     $login = wp_signon(array(
         'user_login' => $name,
         'user_password' => $password,
@@ -93,39 +116,40 @@ else{
         exit;
     
     }
-    
-    
-    
-    $new_order = wp_insert_post(array(
-    
-        'post_type' => 'shop_order',
-        'post_status' => 'wc-processing',
-        'post_author' => $user,
-        
-        
-    ),true);
-    
-    
-    // Hvis fejl, returner og exit.
-    if(is_wp_error($new_order)){
-        
-        $response['error'] = $new_order->get_error_message();
-        echo json_encode($response);
-        exit;
-    
-    }
-    update_post_meta($new_order,'_customer_user',$user);
-    $order = new WC_order($new_order);
-    $product = new WC_product($product_id);
-    
-    $order->add_product($product,1,array());
-    $order->add_order_note($description,'1');
-    
-    
-   
-    $response['success'] = 'Meddelelsen er sendt<br/><br/> Du vil modtage en bekræftelsesemail på den indtastede mailadresse.';
-    
 }
+    
+// OPret ny ordre   
+$new_order = wp_insert_post(array(
+
+    'post_type' => 'shop_order',
+    'post_status' => 'wc-processing',
+    'post_author' => $user,
+
+
+),true);
+
+
+// Hvis fejl, returner og exit.
+if(is_wp_error($new_order)){
+
+    $response['error'] = $new_order->get_error_message();
+    echo json_encode($response);
+    exit;
+
+}
+
+// Indstil kunde
+update_post_meta($new_order,'_customer_user',$user);
+
+// Tilføj produkt
+$order = new WC_order($new_order);
+$product = new WC_product($product_id);
+
+$order->add_product($product,1,array());
+
+// Tilføj ordrenote
+$order->add_order_note($description,'1');
+
 
 
 
@@ -133,7 +157,10 @@ else{
 /*----------------------*/
 /* RETURNER SVAR OG LUK */
 /*----------------------*/
-
+$myaccount_page_id = get_option( 'woocommerce_myaccount_page_id' );
+$link = get_permalink($myaccount_page_id);
+$link_html = '<a class="show" href="'.$link.'">Din kundeside</a>';
+$response['success'] = 'Meddelelsen er sendt<br/><br/> Du vil modtage en ordreopdatering på den indtastede emailadresse. Følg din ordre på '.$link_html;
 echo json_encode($response);
 exit;
 

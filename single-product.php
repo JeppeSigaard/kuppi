@@ -62,6 +62,7 @@
                         <p>Har du dit eget design, eller en helt speciel affaldscontainer? Hos os kan du få det lige som du vil have det. Herunder kan du oprette og en anmodning om en helt speciel ordre. Anmodningen sendes med det samme, og vi besvarer den hurtigst muligt. Hvis du samtidig opretter en bruger, er det nemt at gennemføre ordren, når alt er på plads.</p>
                        
                         <div class="form-container">
+                            <?php if(!is_user_logged_in()) : ?>
                             <div>
                                 <label for="name">Dit navn</label>
                                 <input type="text" name="name" placeholder="Peter Jensen" required>
@@ -74,6 +75,11 @@
                                 <label for="email">Opret et login samtidig: skriv et kodeord</label>
                                 <input type="password" name="password" placeholder="··········" autocomplete="off">
                             </div>
+                            <?php else : $current_user = wp_get_current_user(); ?>
+                            <div>
+                                <strong>Logget ind som <?php echo $current_user->display_name ?> | <a href="<?php echo wp_logout_url(get_the_permalink()); ?>">Log ud</a></strong>
+                            </div>
+                            <?php endif; ?>
                             <div>
                                 <label for="description">Beskriv dine særlige behov</label>
                                 <textarea name="description" placeholder="Jeg skal bruge..."></textarea>

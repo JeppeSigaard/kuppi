@@ -24,7 +24,7 @@ function returnForm(response){
     else if(response.success){
         var success = $('<div class="woocommerce-message">'+response.success+'</div>');
         
-        $('.form-container').removeClass('loading');//.addClass('complete').prepend(success);
+        $('.form-container').removeClass('loading').addClass('complete').prepend(success);
         
     }
 }
