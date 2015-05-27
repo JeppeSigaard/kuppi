@@ -63,7 +63,16 @@ $(function(){
         $('.design.lazy').each(function(i){
             var elem = $(this),
                 img = $('<img/>'),
-                attr = elem.attr('data-bg-image');
+                attr = elem.attr('data-bg-image'),
+                parent = elem.parents('.bin');
+            
+            if(parent.hasClass('bin-small')){
+                attr = attr.replace('-1600x900','-70x120');
+            }
+            
+            if(parent.hasClass('bin-large')){
+                attr = attr.replace('-1600x900','-140x120');
+            }
             
             img.attr('src',attr);
             img.load(function(){
