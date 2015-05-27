@@ -8,7 +8,7 @@
         }
 
         @media only screen and(min-width:960px){
-            padding:200px 20px;
+            padding:150px 20px;
         }
 
     }
@@ -31,16 +31,16 @@
 
     figure{
 
-        width:250px;
+        width:230px;
         position: relative;
         font-size: 120%;
         margin:20px 0px;
 
         img{
             width:auto;
+            max-width:100%;
             margin:auto;
             min-width: none;
-            max-width:none;
             transform: scale(1);
             transition:transform 900ms;
         }
@@ -51,16 +51,46 @@
             padding:10px;
             background:white;
             position:absolute;
-            top:60px;
+            top:120px;
             left:0px;
             transition: box-shadow .2s;
         }
 
     }
 
-    .spand-stor figcaption{
-        left:auto;
-        right:-20px;
-        top:100px;
+    .spand-lille{
+        
+        figcaption{
+        left:40px;
+        }
+        
+        @media only screen and(min-width:768px){
+            
+            text-align:left;
+        
+            figcaption{
+                left:0px;
+            }
+        
+        }
+        
+    }
+    .spand-stor {
+        
+        figcaption{
+            left:20px;
+            top:70px;
+        }
+    }
+    
+    .skilt{
+        
+        figcaption{
+            left:80px;
+            top:110px;
+        }
+        
+        @media only screen and(min-width:768px){text-align: right;}
+
     }
 }

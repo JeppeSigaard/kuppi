@@ -8,4 +8,5 @@ require 'assets/images.php';
 require 'assets/widgets.php';
 require 'assets/meta-box/index.php';
 require 'assets/cat-color.php';
+require 'assets/add-refs.php';
 ?>
