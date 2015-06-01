@@ -30,5 +30,12 @@ $nav_args = array(
         <a href="#" class="menu-toggle">
             <?php include get_template_directory().'/statics/menu.svg'; ?>
         </a>
+        <?php global $woocommerce; $with_hearts = ( sizeof( $woocommerce->cart->cart_contents) > 0 ) ? ' has-items': ' empty'; ?>
+        <a href="<?php echo $woocommerce->cart->get_cart_url() ?>" class="menu-basket<?php echo $with_hearts ?>">
+            
+        </a>
     </nav>
 </header>
+
+
+

@@ -229,7 +229,7 @@ header nav{
         }
     }
 }
-header .menu-toggle{
+header .menu-toggle, header .menu-basket{
     display: block;
     width:40px;
     height:40px;
@@ -237,7 +237,7 @@ header .menu-toggle{
     position:absolute;
     bottom:10px;
     right:10px;
-
+    
     svg{
         width:40px;
         height:40px;
@@ -256,7 +256,41 @@ header .menu-toggle{
         }
     }
 
-    @media only screen and(min-width:960px){
+}
+
+header .menu-basket{
+    
+    right:60px;
+    background: white url(../statics/kurv.png) no-repeat center 4px;
+    background-size:24px;
+    
+    &.has-items{
+        background: white url(../statics/kurv.gif) no-repeat center 4px;
+        background-size:24px;
+    }
+    
+    @media only screen and(min-width:768px){
+        right:70px;
+        background: white url(../statics/kurv.png) no-repeat center 3px;
+        background-size:30px;
+
+        &.has-items{
+            background: white url(../statics/kurv.gif) no-repeat center 3px;
+            background-size:30px;
+        }
+    }
+    
+    border-radius:60px;
+
+    
+}
+
+@media only screen and(min-width:960px){
+    header .menu-toggle{
         display: none;
+    }
+    
+    header .menu-basket{
+        right:10px;
     }
 }
