@@ -4,6 +4,8 @@ $products = get_posts(array(
     'post_type' => 'product',
     'numberposts'   => 24,
     'orderby'   => 'RAND',
+    'meta_key'  => 'show_on_front_page',
+    'meta_value'    => '1',
 ));
 
 

@@ -25,4 +25,22 @@ $mb[] = array(
 );
 
 
+$mb[] = array(
+    'id' => 'feature',
+    'title' => __( 'Tilføj til forsiden', 'rwmb' ),
+    'pages' => array('product'),
+    'context' => 'side',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+        
+        array(
+            'desc'  => __('Vis denne vare på forsiden','smamo'),
+            'id'    => "show_on_front_page",
+            'type' => 'checkbox',
+            'std'   => '0',
+            ),
+    ),
+);
+
 ?>
