@@ -110,6 +110,8 @@
         padding:15px 0px 15px 35px;
         font-size:120%;
         position:relative;
+        background-color: transaprent;
+        transition: background-color .2s;
 
         &:before{
             content:'';
@@ -122,6 +124,11 @@
             height:100%;
             transform:translate(0,-50%);
         }
+    }
+    
+    li:hover a,
+    li.current a{
+        background-color: rgba($green,.3)
     }
 
 }
