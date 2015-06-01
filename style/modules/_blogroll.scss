@@ -104,7 +104,7 @@
 .home .blog-next-prev-link{display:none;}
 .blog-next-prev-link{
     font-size:0;
-    width:180px;
+    width:60px;
     margin:auto;
     
     .inner{
@@ -113,7 +113,6 @@
         height:60px;
         vertical-align: top;
         display: inline-block;
-        width:50%;
         @include font-size;
         
         &:before{
@@ -148,11 +147,13 @@
                 display: block;
                 width: 60px;
                 height: 60px;
-                line-height: 60px;
+                line-height: 67px;
             }
         
         }
     }
+    
+    &.loading{opacity: .5;}
 }
 
 a.read-more{

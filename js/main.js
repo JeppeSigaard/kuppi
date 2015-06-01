@@ -8,3 +8,4 @@
 // @koala-append 'modules/shop-tabs.js';
 // @koala-append 'modules/loadingScreen.js';
 // @koala-append 'modules/movdownifmessage.js';
+// @koala-append 'modules/load-more-posts.js';
