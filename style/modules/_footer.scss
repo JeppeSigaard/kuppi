@@ -5,7 +5,8 @@ footer{
     z-index:2;
     
     .inner{
-        max-width: $page-width-max;
+        max-width: 1080px;
+        padding:0px 10px;
         margin:auto;
         position:relative;
         font-size: 0;
