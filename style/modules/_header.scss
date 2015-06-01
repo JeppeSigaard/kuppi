@@ -236,7 +236,7 @@ header .menu-toggle, header .menu-basket{
     background-size:40px;
     position:absolute;
     bottom:10px;
-    right:10px;
+    right:20px;
     
     svg{
         width:40px;
@@ -260,23 +260,23 @@ header .menu-toggle, header .menu-basket{
 
 header .menu-basket{
     
-    right:60px;
-    background: white url(../statics/kurv.png) no-repeat center 4px;
-    background-size:24px;
+    right:80px;
+    background: white url(../statics/kurv-brun.png) no-repeat center -1px;
+    background-size:28px;
     
     &.has-items{
-        background: white url(../statics/kurv.gif) no-repeat center 4px;
-        background-size:24px;
+        background: white url(../statics/kurv-brun.gif) no-repeat center -1px;
+        background-size:28px;
     }
     
     @media only screen and(min-width:768px){
-        right:70px;
-        background: white url(../statics/kurv.png) no-repeat center 3px;
-        background-size:30px;
+        right:90px;
+        background: white url(../statics/kurv-brun.png) no-repeat center 0px;
+        background-size:35px;
 
         &.has-items{
-            background: white url(../statics/kurv.gif) no-repeat center 3px;
-            background-size:30px;
+            background: white url(../statics/kurv-brun.gif) no-repeat center 0px;
+            background-size:35px;
         }
     }
     
@@ -291,6 +291,6 @@ header .menu-basket{
     }
     
     header .menu-basket{
-        right:10px;
+        right:20px;
     }
 }
