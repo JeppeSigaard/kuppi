@@ -90,6 +90,7 @@ header nav{
         line-height:1.5;
         border-left:2px solid rgba(black,.1);
 
+        
         a{
             display: block;
             padding:10px 20px;
@@ -202,6 +203,10 @@ header nav{
 
                 li:last-child a{
                     border-bottom:none;
+                }
+                
+                li:hover a{
+                    background:rgba(black,.1);
                 }
 
             }
