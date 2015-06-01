@@ -1,5 +1,5 @@
 <?php get_header();?>
-<section class="blogroll content-right">
+<section class="blogroll content content-right">
     <main>
         <ul class="products-list">
         <?php while(have_posts()): the_post(); ?>
