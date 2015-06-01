@@ -13,7 +13,7 @@ $products = get_posts(array(
 
 <section class="design-spinner">
     <div class="spin-left">
-        <h3>Kulør på skraldet</h3>
+        <h3>Pynt på skraldet</h3>
         <a class="click-here" href="<?php echo esc_url(get_bloginfo('url')) ?>/shop/">Klik her</a>
         <span>Find alle designs til spand og container</span>
         <nav>

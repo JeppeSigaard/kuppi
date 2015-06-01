@@ -8,11 +8,11 @@
                 <?php echo esc_attr(get_bloginfo('description')); ?>
             </h2>
         </div>
-        <div class="front-bins">
+        <a class="front-bins" href="<?php bloginfo('url'); ?>/shop/">
             <div class="bin bin-small">
             </div>
             <div class="bin bin-large">
             </div>
-        </div>
+        </a>
     </div>
 </section>
