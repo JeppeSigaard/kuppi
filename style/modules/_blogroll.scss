@@ -154,3 +154,24 @@
         }
     }
 }
+
+a.read-more{
+    display: block;
+    padding:0px 10px;
+
+    span{
+        font-size: 20px;
+        background:$green;
+        color:white;
+        box-shadow: $subtle-shadow;
+        transition: box-shadow .2s;
+        display: block;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        
+        &:hover{
+            box-shadow: $base-shadow;
+        }
+    }
+}

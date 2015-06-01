@@ -54,6 +54,9 @@ if ( $custom_query->have_posts() ) :
         </a>
    <?php endwhile; endif; ?>
 <?php wp_reset_postdata(); ?>
+<?php if($front_page) : ?>
+    <a href="<?php bloginfo('url') ?>/blog/" class="read-more"><span>Flere blogindlæg</span></a>
+<?php endif; ?>
 </main>
     <aside rel="alternate" role="complementary">
         <?php get_template_part('modules/blog','cats');?>
