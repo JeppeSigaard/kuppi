@@ -1,6 +1,6 @@
 <?php 
 
-$posts_per_page = (is_front_page()) ? get_option('posts_per_page') : -1 ;
+$posts_per_page = (is_front_page()) ? get_option('posts_per_page') : 10 ;
 $front_page = (is_front_page()) ? true : false ;
 
 $custom_query_args = array(
@@ -56,6 +56,11 @@ if ( $custom_query->have_posts() ) :
 <?php wp_reset_postdata(); ?>
 <?php if($front_page) : ?>
     <a href="<?php bloginfo('url') ?>/blog/" class="read-more"><span>Flere blogindlæg</span></a>
+<?php else : ?>
+    <div class="blog-next-prev-link">
+        <div class="inner"><?php previous_posts_link('<span class="dashicons dashicons-arrow-left-alt2"></span>'); ?></div>
+        <div class="inner"><?php next_posts_link('<span class="dashicons dashicons-arrow-right-alt2"></span>'); ?></div>
+    </div>
 <?php endif; ?>
 </main>
     <aside rel="alternate" role="complementary">
