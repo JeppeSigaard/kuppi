@@ -1,8 +1,11 @@
 <?php 
 
+$posts_per_page = (is_front_page()) ? get_option('posts_per_page') : -1 ;
+$front_page = (is_front_page()) ? true : false ;
+
 $custom_query_args = array(
     'post_type' => 'post',
-    'posts_per_page'   => get_option('posts_per_page'), 
+    'posts_per_page'   => $posts_per_page, 
 );
 
 $i = 0;
@@ -27,9 +30,16 @@ if ( $custom_query->have_posts() ) :
         $custom_query->the_post();
         
         $i++;
-        if($i >= 2){$preview = 'medium';}
-        if($i >= 3){$preview = 'small';}
-
+        if($front_page == true){
+            if($i >= 2){$preview = 'medium';}
+            if($i >= 3){$preview = 'small';}
+        }
+        else {
+            $preview = 'medium';
+            if(!has_post_thumbnail()){
+                $preview = 'large';
+            };
+        }
         ?>
         <a role="article" class="preview preview-<?php echo $preview ?>" id="post-<?php the_ID() ?>" href="<?php the_permalink(); ?>">
            <div class="inner">
@@ -42,13 +52,7 @@ if ( $custom_query->have_posts() ) :
                 </div>
             </div>
         </a>
-   <?php endwhile; endif; if(!is_front_page()) :?>
-<div class="blog-next-prev-link">
-    <div class="inner"><?php previous_posts_link('<span class="dashicons dashicons-arrow-left-alt2"></span>'); ?></div>
-    <div class="inner"><?php next_posts_link('<span class="dashicons dashicons-arrow-right-alt2"></span>'); ?></div>
-</div>
-<?php endif; ?>
-
+   <?php endwhile; endif; ?>
 <?php wp_reset_postdata(); ?>
 </main>
     <aside rel="alternate" role="complementary">
