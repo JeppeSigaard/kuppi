@@ -89,6 +89,7 @@ header nav{
         text-shadow: $subtle-shadow;
         line-height:1.5;
         border-left:2px solid rgba(black,.1);
+        overflow-y: scroll;
 
         
         a{
