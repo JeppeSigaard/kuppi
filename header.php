@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php wp_title(true,' · ', 'right'); ?></title>
+    <title><?php wp_title(' · ', true, 'right'); ?></title>
     <?php wp_head();?>
     <link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('url') ?>/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?php bloginfo('url') ?>/apple-touch-icon-60x60.png">
