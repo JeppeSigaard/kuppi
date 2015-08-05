@@ -2,6 +2,8 @@
     position:fixed;
     background-size:cover;
     background-position: center;
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
     top:0;
     left:0;
     width:100%;
@@ -14,6 +16,8 @@
     .product-heading{
         position:relative;
         overflow: auto;
+        backface-visibility: hidden;
+        transform: translate3d(0,0,0);
 
         main{
             min-height: 600px;
@@ -112,6 +116,8 @@
     .product-body{
         position:relative;
         background:$body-bg;
+        backface-visibility: hidden;
+        //transform: translate3d(0,0,0);
 
         >div{
             overflow:auto;

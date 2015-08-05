@@ -3,6 +3,8 @@ footer{
     padding:60px 10px;
     position: relative;
     z-index:2;
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
     
     .inner{
         max-width: 1080px;
