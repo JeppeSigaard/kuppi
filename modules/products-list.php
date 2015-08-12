@@ -28,3 +28,6 @@ $prod_q = new WP_query( array(
     </li>
 <?php endwhile; ?>
 </ul>
+
+
+

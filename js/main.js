@@ -1,5 +1,6 @@
 // @koala-prepend 'assets/flickity.js';
 // @koala-prepend 'assets/autosize.js';
+// @koala-prepend '../lightbox/js/lightbox.js';
 // @koala-append 'modules/designSpinner.js';
 // @koala-append 'modules/artistSpinner.js';
 // @koala-append 'modules/menuToggle.js';
@@ -9,3 +10,4 @@
 // @koala-append 'modules/loadingScreen.js';
 // @koala-append 'modules/movdownifmessage.js';
 // @koala-append 'modules/load-more-posts.js';
+// @koala-append 'modules/lightbox-images.js';
