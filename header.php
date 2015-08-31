@@ -51,7 +51,7 @@ $nav_args = array(
         <ul>
             <?php wp_nav_menu($nav_args); ?>
         </ul>
-        <a href="#" class="menu-toggle">
+        <a href="<?php bloginfo('url') ?>" class="menu-toggle">
             <?php include get_template_directory().'/statics/menu.svg'; ?>
         </a>
         <?php global $woocommerce; $with_hearts = ( sizeof( $woocommerce->cart->cart_contents) > 0 ) ? ' has-items': ' empty'; ?>

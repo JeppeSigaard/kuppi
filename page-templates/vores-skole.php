@@ -5,7 +5,7 @@ Template name: Vores Skole
 get_header();
 ?>
 
-<section class="content">
+<section class="content" data-base="<?php echo get_bloginfo('url') ?>">
    
    <div class="quick-buy">
        <div class="inner read-width">
@@ -19,7 +19,8 @@ get_header();
                     <div><span>Pris</span> 149,-</div>
                     <div><span>Levering</span> 45,-</div>
                     <div><strong><span>Ialt</span> 194,-</strong></div>
-                    <a class="buy-now-btn button" href="<?php bloginfo('url') ?>/checkout/?add-to-cart=25">Køb nu</a>
+
+                    <a class="buy-now-btn button" data-buy-item="518" href="<?php echo get_bloginfo('url') ?>/checkout/">Køb nu</a>
                 </div>
            </div>
        </div>
@@ -54,7 +55,7 @@ get_header();
                     <div><span>Pris</span> 149,-</div>
                     <div><span>Levering</span> 45,-</div>
                     <div><strong><span>Ialt</span> 194,-</strong></div>
-                    <a class="buy-now-btn button" href="<?php bloginfo('url') ?>/checkout/?add-to-cart=25">Køb nu</a>
+                    <a class="buy-now-btn button" data-buy-item="518" href="<?php echo get_bloginfo('url') ?>/checkout/">Køb nu</a>
                 </div>
            </div>
        </div>
