@@ -10,6 +10,12 @@ function smamo_do_scripts(){
         wp_enqueue_script('jquery');
 
         wp_enqueue_script('kuppi',get_template_directory_uri().'/js/main.min.js',array('jquery'),null,true);
+        
+        wp_register_script('vores-skole',get_template_directory_uri().'/js/pages/vores-skole.min.js',array('jquery'),null,true);
+    
+    if(is_page_template('page-templates/vores-skole.php')){
+        wp_enqueue_script('vores-skole');
+    }
     }
 
 

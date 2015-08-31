@@ -17,6 +17,14 @@ function smamo_do_styles(){
     wp_enqueue_style( 'covered-by-your-grace', '//fonts.googleapis.com/css?family=Covered+By+Your+Grace', false, null, 'all' );
     wp_enqueue_style('dashicons');
     wp_enqueue_style( 'main', get_template_directory_uri().'/style/style.css', false, null, 'all' );
+    wp_register_style( 'vores-skole', get_template_directory_uri().'/style/pages/vores-skole/main.css', false, null, 'all' );
+    wp_register_style( 'vores-skole-lato', '//fonts.googleapis.com/css?family=Lato:300,400,700', false, null, 'all' );
+    
+    
+    if(is_page_template('page-templates/vores-skole.php')){
+        wp_enqueue_style('vores-skole');
+        wp_enqueue_style('vores-skole-lato');
+    }
 
 
 }
