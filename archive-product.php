@@ -2,7 +2,7 @@
 <section class="blogroll content content-right">
     <main>
         <ul class="products-list">
-        <?php while(have_posts()): the_post(); if ($post->ID !== 518) : ?>
+        <?php while(have_posts()): the_post(); if ($post->ID !== 551) : ?>
            <li <?php post_class(); ?>>
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail('shop_catalog') ?>
