@@ -166,6 +166,9 @@ aside {
 
 article {
   line-height: 1.6; }
+  article img {
+    width: auto;
+    max-width: 100%; }
   article header {
     background: none; }
   article h1 {
