@@ -16,8 +16,8 @@ function smamo_do_styles(){
     wp_enqueue_style( 'oswald', '//fonts.googleapis.com/css?family=Oswald:400,300', false, null, 'all' );
     wp_enqueue_style( 'covered-by-your-grace', '//fonts.googleapis.com/css?family=Covered+By+Your+Grace', false, null, 'all' );
     wp_enqueue_style('dashicons');
-    wp_enqueue_style( 'main', get_template_directory_uri().'/style/style.css', false, null, 'all' );
-    wp_register_style( 'vores-skole', get_template_directory_uri().'/style/pages/vores-skole/main.css', false, null, 'all' );
+    wp_enqueue_style( 'main', get_template_directory_uri().'/style/style.css?v=2', false, null, 'all' );
+    wp_register_style( 'vores-skole', get_template_directory_uri().'/style/pages/vores-skole/main.css?v=2', false, null, 'all' );
     wp_register_style( 'vores-skole-lato', '//fonts.googleapis.com/css?family=Lato:300,400,700', false, null, 'all' );
     
     
