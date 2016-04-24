@@ -20,7 +20,7 @@ get_header();
                     <div><span>Levering</span> 45,-</div>
                     <div><strong><span>Ialt</span> 194,-</strong></div>
 
-                    <a class="buy-now-btn button" data-buy-item="551" href="<?php echo get_bloginfo('url') ?>/checkout/">Køb nu</a>
+                    <a class="buy-now-btn button" href="<?php echo get_bloginfo('url') ?>/cart/?add-to-cart=551">Køb nu</a>
                 </div>
            </div>
        </div>
@@ -55,7 +55,7 @@ get_header();
                     <div><span>Pris</span> 149,-</div>
                     <div><span>Levering</span> 45,-</div>
                     <div><strong><span>Ialt</span> 194,-</strong></div>
-                    <a class="buy-now-btn button" data-buy-item="551" href="<?php echo get_bloginfo('url') ?>/checkout/">Køb nu</a>
+                    <a class="buy-now-btn button" href="<?php echo get_bloginfo('url') ?>/cart/?add-to-cart=551">Køb nu</a>
                 </div>
            </div>
        </div>

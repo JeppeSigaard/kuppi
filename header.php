@@ -31,7 +31,7 @@
     </script>
 </head>
 <body <?php body_class(); ?>>
-<script>kuppiLoadPage = setTimeout(function(){document.getElementsByTagName('body')[0].className+=" loading-screen";},400);</script>
+<script>kuppiLoadPage = setTimeout(function(){document.getElementsByTagName('body')[0].className+=" loading-screen";},200);</script>
 <?php
 $nav_args = array(
 	'theme_location'  => 'header-menu',

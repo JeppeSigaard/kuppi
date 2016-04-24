@@ -1,5 +1,5 @@
 $(function(){
-
+/*
     $('a.buy-now-btn').on({
         click:function(e){
     
@@ -21,6 +21,6 @@ $(function(){
             
             window.location.href = href;
     }});
-    
+  */  
 
 });

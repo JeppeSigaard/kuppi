@@ -28,4 +28,3 @@ function smamo_do_styles(){
 
 
 }
-?>
