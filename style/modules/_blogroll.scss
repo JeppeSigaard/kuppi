@@ -28,6 +28,7 @@
         //top:-1px;
         box-shadow: $base-shadow;
     }
+    
 
     .desc{
         padding:10px 10px 20px;
@@ -76,21 +77,22 @@
         width:auto;
         font-size:0;
 
+        .inner{
+            text-align: center;
+        }
+        
 
         figure{
             display: inline-block;
-            width:49.5%;
             overflow:hidden;
             vertical-align: top;
         }
 
         .desc{
             @include font-size;
-            position:absolute;
-            right:0;
-            top:50%;
             width:50%;
-            transform:translate(0,-50%);
+            margin:auto;
+            display: inline-block;
         }
     }
 

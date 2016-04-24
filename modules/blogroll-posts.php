@@ -44,7 +44,10 @@ if ( $custom_query->have_posts() ) :
         <a role="article" class="preview preview-<?php echo $preview ?>" id="post-<?php the_ID() ?>" href="<?php the_permalink(); ?>">
            <div class="inner">
                 <figure>
-                    <?php the_post_thumbnail('preview-'.$preview); ?>
+                    <?php if (has_post_thumbnail()) : the_post_thumbnail('preview-'.$preview);  
+                        elseif (smamo_inner_img(get_the_ID())): ?>
+                    <img src="<?php echo smamo_inner_img(get_the_ID()) ?>">
+                    <?php endif; ?>
                 </figure>
                 <div class="desc">
                     <h3><?php the_title() ?></h3>

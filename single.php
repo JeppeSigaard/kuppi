@@ -10,6 +10,7 @@
                     <span class="date"><?php the_date(); ?></span>
                     <!--<span class="time"><?php the_time(); ?></span>-->
                 </div>
+                <?php if (has_post_thumbnail()) { the_post_thumbnail('preview-large'); } ?>
                 <?php the_content();?>
             </span>
         </article>
